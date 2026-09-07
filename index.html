@@ -135,6 +135,12 @@
     .pillar b{display:block;font-size:16px;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;font-weight:700}
     .pillar span{display:block;color:var(--muted);font-size:12.5px}
 
+    /* Section 03 — building (skills & tools) */
+    .build-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+    .build-left{display:grid;gap:24px}
+    .build-left .p-card{padding-right:0}
+    .build-panel{padding:22px;background:#f1f5f9;border-radius:16px}
+
     /* Section head */
     section{padding:90px 0}
     .sec-num{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.14em;margin-bottom:18px}
@@ -160,7 +166,7 @@
     .cap-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
     .cap-tags li{color:var(--blue);font-size:12px;font-weight:600;background:var(--wash);border-radius:999px;padding:4px 10px}
 
-    /* Section 03 — workflow (dark) */
+    /* Section 04 — workflow (dark) */
     .workflow{background:var(--dark);color:#e2e8f0}
     .workflow .sec-num{color:#7ea3ff}
     .workflow .sec-title{color:#fff}
@@ -175,7 +181,7 @@
     .wf-col strong{display:block;color:#fff;font-size:14.5px;margin-bottom:4px;font-weight:600;letter-spacing:-.005em}
     .wf-col span{color:#94a3b8;font-size:13px;line-height:1.65;display:block}
 
-    /* Section 04 — delivery */
+    /* Section 05 — delivery */
     .delivery-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
     .d-step b{display:block;color:var(--ink);font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
     .d-step b:before{content:"";display:block;width:28px;border-top:2px solid var(--blue);margin-bottom:14px}
@@ -187,7 +193,7 @@
     .pace h4{font-size:17px;margin:10px 0 8px;color:var(--ink);letter-spacing:-.015em;font-weight:700}
     .pace p{color:var(--muted);margin:0;font-size:13.5px}
 
-    /* Section 05 — governance */
+    /* Section 06 — governance */
     .gov-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
     .gov-col h3{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin:0 0 18px}
     .gov-list{margin:0;padding:0;list-style:none}
@@ -196,7 +202,7 @@
     .gov-list b{color:var(--ink);font-weight:600;font-size:14.5px}
     .gov-list span{color:var(--muted);font-size:13.5px}
 
-    /* Section 06 — compare */
+    /* Section 07 — compare */
     .compare-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line);background:#fff;-webkit-overflow-scrolling:touch}
     .compare-table{width:100%;min-width:760px;border-collapse:collapse;font-size:14px}
     .compare-table th,.compare-table td{padding:16px 20px;text-align:left;vertical-align:top;line-height:1.55}
@@ -207,7 +213,7 @@
     .compare-table tbody td.us{background:var(--wash);color:var(--ink);font-weight:600}
     .compare-table tbody tr:last-child th,.compare-table tbody tr:last-child td{border-bottom:0}
 
-    /* Section 07 — cases */
+    /* Section 08 — cases */
     .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .case{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff}
     .case:hover{border-color:#c7d2fe;box-shadow:0 12px 40px rgba(37,99,235,.06)}
@@ -239,7 +245,7 @@
 
     /* Responsive */
     @media(max-width:960px){
-      .hero-grid{grid-template-columns:1fr;gap:44px}
+      .hero-grid,.build-grid{grid-template-columns:1fr;gap:44px}
       .pillar-grid,.platform-grid,.cap-grid,.wf-grid,.delivery-steps,.pace-grid,.gov-grid,.case-grid,.fin-cols{grid-template-columns:1fr 1fr}
       .gov-list li{grid-template-columns:1fr;gap:6px}
       .navlinks a{display:none}
@@ -392,108 +398,150 @@
   </div>
 </section>
 
-<!-- 03 · Workflow (dark) -->
-<section id="workflow" class="workflow">
+<!-- 03 · Building — skills & tools -->
+<section id="building">
   <div class="wrap">
     <header class="sec-head">
       <div class="sec-num" data-i18n="sec3Num"></div>
       <h2 class="sec-title" data-i18n="sec3Title"></h2>
       <p class="sec-lead" data-i18n="sec3Lead"></p>
     </header>
-    <div class="wf-grid">
-      <div class="wf-col">
-        <div class="wf-col-title" data-i18n="sec3ColLeft"></div>
-        <ol>
-          <li><span class="wf-idx">01</span><div><strong data-i18n="sec3L1Title"></strong><span data-i18n="sec3L1Body"></span></div></li>
-          <li><span class="wf-idx">02</span><div><strong data-i18n="sec3L2Title"></strong><span data-i18n="sec3L2Body"></span></div></li>
-          <li><span class="wf-idx">03</span><div><strong data-i18n="sec3L3Title"></strong><span data-i18n="sec3L3Body"></span></div></li>
-          <li><span class="wf-idx">04</span><div><strong data-i18n="sec3L4Title"></strong><span data-i18n="sec3L4Body"></span></div></li>
-        </ol>
+    <div class="build-grid">
+      <div class="build-left">
+        <article class="p-card">
+          <div class="num">01 / CONVERSE</div>
+          <h3 data-i18n="sec3Card1Title"></h3>
+          <p data-i18n="sec3Card1Body"></p>
+        </article>
+        <article class="p-card">
+          <div class="num">02 / EVOLVE</div>
+          <h3 data-i18n="sec3Card2Title"></h3>
+          <p data-i18n="sec3Card2Body"></p>
+        </article>
+        <article class="p-card">
+          <div class="num">03 / CONNECT</div>
+          <h3 data-i18n="sec3Card3Title"></h3>
+          <p data-i18n="sec3Card3Body"></p>
+        </article>
       </div>
-      <div class="wf-col">
-        <div class="wf-col-title" data-i18n="sec3ColRight"></div>
-        <ol>
-          <li><span class="wf-idx">A</span><div><strong data-i18n="sec3R1Title"></strong><span data-i18n="sec3R1Body"></span></div></li>
-          <li><span class="wf-idx">B</span><div><strong data-i18n="sec3R2Title"></strong><span data-i18n="sec3R2Body"></span></div></li>
-          <li><span class="wf-idx">C</span><div><strong data-i18n="sec3R3Title"></strong><span data-i18n="sec3R3Body"></span></div></li>
-          <li><span class="wf-idx">D</span><div><strong data-i18n="sec3R4Title"></strong><span data-i18n="sec3R4Body"></span></div></li>
-        </ol>
-      </div>
+      <aside class="build-panel">
+        <div class="panel-label">RAgents.net · <span data-i18n="sec3PanelLabel"></span></div>
+        <div class="panel-input" data-i18n="sec3PanelInput"></div>
+        <div class="panel-flow">
+          <strong data-i18n="sec3PanelFlowTitle"></strong>
+          <ol>
+            <li><b>01</b><span data-i18n="sec3PanelStep1"></span></li>
+            <li><b>02</b><span data-i18n="sec3PanelStep2"></span></li>
+            <li><b>03</b><span data-i18n="sec3PanelStep3"></span></li>
+          </ol>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- 04 · Delivery -->
-<section id="delivery">
+<!-- 04 · Workflow (dark) -->
+<section id="workflow" class="workflow">
   <div class="wrap">
     <header class="sec-head">
       <div class="sec-num" data-i18n="sec4Num"></div>
       <h2 class="sec-title" data-i18n="sec4Title"></h2>
       <p class="sec-lead" data-i18n="sec4Lead"></p>
     </header>
-    <div class="delivery-steps">
-      <div class="d-step"><b data-i18n="sec4Step1Title"></b><span data-i18n="sec4Step1Body"></span></div>
-      <div class="d-step"><b data-i18n="sec4Step2Title"></b><span data-i18n="sec4Step2Body"></span></div>
-      <div class="d-step"><b data-i18n="sec4Step3Title"></b><span data-i18n="sec4Step3Body"></span></div>
-      <div class="d-step"><b data-i18n="sec4Step4Title"></b><span data-i18n="sec4Step4Body"></span></div>
-    </div>
-    <h3 class="pace-title" data-i18n="sec4PaceTitle"></h3>
-    <div class="pace-grid">
-      <article class="pace">
-        <div class="num" data-i18n="sec4Pace1Num"></div>
-        <h4 data-i18n="sec4Pace1Title"></h4>
-        <p data-i18n="sec4Pace1Body"></p>
-      </article>
-      <article class="pace">
-        <div class="num" data-i18n="sec4Pace2Num"></div>
-        <h4 data-i18n="sec4Pace2Title"></h4>
-        <p data-i18n="sec4Pace2Body"></p>
-      </article>
-      <article class="pace">
-        <div class="num" data-i18n="sec4Pace3Num"></div>
-        <h4 data-i18n="sec4Pace3Title"></h4>
-        <p data-i18n="sec4Pace3Body"></p>
-      </article>
+    <div class="wf-grid">
+      <div class="wf-col">
+        <div class="wf-col-title" data-i18n="sec4ColLeft"></div>
+        <ol>
+          <li><span class="wf-idx">01</span><div><strong data-i18n="sec4L1Title"></strong><span data-i18n="sec4L1Body"></span></div></li>
+          <li><span class="wf-idx">02</span><div><strong data-i18n="sec4L2Title"></strong><span data-i18n="sec4L2Body"></span></div></li>
+          <li><span class="wf-idx">03</span><div><strong data-i18n="sec4L3Title"></strong><span data-i18n="sec4L3Body"></span></div></li>
+          <li><span class="wf-idx">04</span><div><strong data-i18n="sec4L4Title"></strong><span data-i18n="sec4L4Body"></span></div></li>
+        </ol>
+      </div>
+      <div class="wf-col">
+        <div class="wf-col-title" data-i18n="sec4ColRight"></div>
+        <ol>
+          <li><span class="wf-idx">A</span><div><strong data-i18n="sec4R1Title"></strong><span data-i18n="sec4R1Body"></span></div></li>
+          <li><span class="wf-idx">B</span><div><strong data-i18n="sec4R2Title"></strong><span data-i18n="sec4R2Body"></span></div></li>
+          <li><span class="wf-idx">C</span><div><strong data-i18n="sec4R3Title"></strong><span data-i18n="sec4R3Body"></span></div></li>
+          <li><span class="wf-idx">D</span><div><strong data-i18n="sec4R4Title"></strong><span data-i18n="sec4R4Body"></span></div></li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 05 · Governance -->
-<section id="governance" class="soft">
+<!-- 05 · Delivery -->
+<section id="delivery">
   <div class="wrap">
     <header class="sec-head">
       <div class="sec-num" data-i18n="sec5Num"></div>
       <h2 class="sec-title" data-i18n="sec5Title"></h2>
+      <p class="sec-lead" data-i18n="sec5Lead"></p>
+    </header>
+    <div class="delivery-steps">
+      <div class="d-step"><b data-i18n="sec5Step1Title"></b><span data-i18n="sec5Step1Body"></span></div>
+      <div class="d-step"><b data-i18n="sec5Step2Title"></b><span data-i18n="sec5Step2Body"></span></div>
+      <div class="d-step"><b data-i18n="sec5Step3Title"></b><span data-i18n="sec5Step3Body"></span></div>
+      <div class="d-step"><b data-i18n="sec5Step4Title"></b><span data-i18n="sec5Step4Body"></span></div>
+    </div>
+    <h3 class="pace-title" data-i18n="sec5PaceTitle"></h3>
+    <div class="pace-grid">
+      <article class="pace">
+        <div class="num" data-i18n="sec5Pace1Num"></div>
+        <h4 data-i18n="sec5Pace1Title"></h4>
+        <p data-i18n="sec5Pace1Body"></p>
+      </article>
+      <article class="pace">
+        <div class="num" data-i18n="sec5Pace2Num"></div>
+        <h4 data-i18n="sec5Pace2Title"></h4>
+        <p data-i18n="sec5Pace2Body"></p>
+      </article>
+      <article class="pace">
+        <div class="num" data-i18n="sec5Pace3Num"></div>
+        <h4 data-i18n="sec5Pace3Title"></h4>
+        <p data-i18n="sec5Pace3Body"></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · Governance -->
+<section id="governance" class="soft">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec6Num"></div>
+      <h2 class="sec-title" data-i18n="sec6Title"></h2>
     </header>
     <div class="gov-grid">
       <div class="gov-col">
-        <h3 data-i18n="sec5LeftTitle"></h3>
+        <h3 data-i18n="sec6LeftTitle"></h3>
         <ul class="gov-list">
-          <li><b data-i18n="sec5L1Title"></b><span data-i18n="sec5L1Body"></span></li>
-          <li><b data-i18n="sec5L2Title"></b><span data-i18n="sec5L2Body"></span></li>
-          <li><b data-i18n="sec5L3Title"></b><span data-i18n="sec5L3Body"></span></li>
+          <li><b data-i18n="sec6L1Title"></b><span data-i18n="sec6L1Body"></span></li>
+          <li><b data-i18n="sec6L2Title"></b><span data-i18n="sec6L2Body"></span></li>
+          <li><b data-i18n="sec6L3Title"></b><span data-i18n="sec6L3Body"></span></li>
         </ul>
       </div>
       <div class="gov-col">
-        <h3 data-i18n="sec5RightTitle"></h3>
+        <h3 data-i18n="sec6RightTitle"></h3>
         <ul class="gov-list">
-          <li><b data-i18n="sec5R1Title"></b><span data-i18n="sec5R1Body"></span></li>
-          <li><b data-i18n="sec5R2Title"></b><span data-i18n="sec5R2Body"></span></li>
-          <li><b data-i18n="sec5R3Title"></b><span data-i18n="sec5R3Body"></span></li>
-          <li><b data-i18n="sec5R4Title"></b><span data-i18n="sec5R4Body"></span></li>
+          <li><b data-i18n="sec6R1Title"></b><span data-i18n="sec6R1Body"></span></li>
+          <li><b data-i18n="sec6R2Title"></b><span data-i18n="sec6R2Body"></span></li>
+          <li><b data-i18n="sec6R3Title"></b><span data-i18n="sec6R3Body"></span></li>
+          <li><b data-i18n="sec6R4Title"></b><span data-i18n="sec6R4Body"></span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 06 · Compare -->
+<!-- 07 · Compare -->
 <section id="compare">
   <div class="wrap">
     <header class="sec-head">
-      <div class="sec-num" data-i18n="sec6Num"></div>
-      <h2 class="sec-title" data-i18n="sec6Title"></h2>
-      <p class="sec-lead" data-i18n="sec6Lead"></p>
+      <div class="sec-num" data-i18n="sec7Num"></div>
+      <h2 class="sec-title" data-i18n="sec7Title"></h2>
+      <p class="sec-lead" data-i18n="sec7Lead"></p>
     </header>
     <div class="compare-wrap">
       <table class="compare-table">
@@ -519,13 +567,13 @@
   </div>
 </section>
 
-<!-- 07 · Cases -->
+<!-- 08 · Cases -->
 <section id="cases">
   <div class="wrap">
     <header class="sec-head">
-      <div class="sec-num" data-i18n="sec7Num"></div>
-      <h2 class="sec-title" data-i18n="sec7Title"></h2>
-      <p class="sec-lead" data-i18n="sec7Lead"></p>
+      <div class="sec-num" data-i18n="sec8Num"></div>
+      <h2 class="sec-title" data-i18n="sec8Title"></h2>
+      <p class="sec-lead" data-i18n="sec8Lead"></p>
     </header>
     <div class="case-grid">
       <article class="case">
@@ -645,54 +693,71 @@ const copy = {
     cap6Body:'查看运行日志与资源状态，了解优化如何执行，为问题定位和流程迭代提供依据。',
     cap6Tag1:'执行追踪', cap6Tag2:'资源监控', cap6Tag3:'日志',
 
-    // 03 Workflow
-    sec3Num:'03 / 工作方式',
-    sec3Title:'一个业务任务，串起整个平台。',
-    sec3Lead:'以供应链单据核对为例，展示知识、模型、流程与工具如何配合。以下为应用设计示意。',
-    sec3ColLeft:'从业务问题出发',
-    sec3ColRight:'由平台能力支撑',
-    sec3L1Title:'收集任务材料', sec3L1Body:'输入待核对单据与业务要求，明确处理范围。',
-    sec3L2Title:'补充企业知识', sec3L2Body:'检索制度与规范，为核对提供业务依据。',
-    sec3L3Title:'执行核对步骤', sec3L3Body:'结合模型与工具，逐笔字段完成整理。',
-    sec3L4Title:'输出待复核结果', sec3L4Body:'形成差异清单，交给业务人员确认与处理。',
-    sec3R1Title:'知识匹配', sec3R1Body:'知识调度给出上下文，模型参与理解与信息提取。',
-    sec3R2Title:'流程协作', sec3R2Body:'编排步骤和条件分支，串接各环节输入输出。',
-    sec3R3Title:'工具与系统', sec3R3Body:'按需选择原生工具，直接接触业务操作。',
-    sec3R4Title:'记录与优化', sec3R4Body:'查看执行过程和运行日志，定位问题并迭代流程。',
+    // 03 Building — skills & tools
+    sec3Num:'03 / 打造数字员工',
+    sec3Title:'手和脚，就是技能与工具。',
+    sec3Lead:'数字员工 = 角色 + 技能 + 工具 + 记忆。角色定义"是谁"，记忆保留"做过什么"；技能与工具决定"能做什么"——两者都可用一句话对话式创建、更新。',
+    sec3Card1Title:'对话式创建',
+    sec3Card1Body:'一句话描述目标——平台匹配工具与知识、生成技能，挂到岗位。',
+    sec3Card2Title:'对话式更新',
+    sec3Card2Body:'场景或规则变了，直接和平台说，无需重建；技能是团队资产，一次创建，多人使用。',
+    sec3Card3Title:'工具是接口层',
+    sec3Card3Body:'MCP、RPA+、Native 三种接入方式，让技能真正落到业务系统。',
+    sec3PanelLabel:'对话式技能构建',
+    sec3PanelInput:'帮我做一个能读发票并核对金额的技能',
+    sec3PanelFlowTitle:'自然语言 → 技能配置',
+    sec3PanelStep1:'解析意图与验收标准',
+    sec3PanelStep2:'匹配 OCR、金额比对工具与相关知识',
+    sec3PanelStep3:'生成技能并挂到岗位',
 
-    // 04 Delivery
-    sec4Num:'04 / 构建与落地',
-    sec4Title:'从一个场景开始，逐步扩展到团队。',
-    sec4Lead:'围绕业务目标组织所需资源，再验证流程、部署环境与使用方式。',
-    sec4Step1Title:'接入知识', sec4Step1Body:'整理业务资料与知识范围',
-    sec4Step2Title:'配置智能体', sec4Step2Body:'关联角色、模型与工具',
-    sec4Step3Title:'编排流程', sec4Step3Body:'配置步骤与业务规则',
-    sec4Step4Title:'运行与优化', sec4Step4Body:'追踪执行，完善任务效果',
-    sec4PaceTitle:'按业务复杂度，安排落地节奏。',
-    sec4Pace1Num:'01 / 场景梳理', sec4Pace1Title:'确定要解决的问题',
-    sec4Pace1Body:'明确任务边界，输入输出与验收标准，选择一个可优先落地的场景。',
-    sec4Pace2Num:'02 / 原型验证', sec4Pace2Title:'用真实业务测效果',
-    sec4Pace2Body:'以业务样本验证检索、流程执行与工具支援，发现需要改进的环节。',
-    sec4Pace3Num:'03 / 部署推广', sec4Pace3Title:'在企业环境中运行',
-    sec4Pace3Body:'按组织结构配置使用权限，完成部署与培训，再逐步扩大使用范围。',
+    // 04 Workflow
+    sec4Num:'04 / 工作方式',
+    sec4Title:'一个业务任务，串起整个平台。',
+    sec4Lead:'以供应链单据核对为例，展示知识、模型、流程与工具如何配合。以下为应用设计示意。',
+    sec4ColLeft:'从业务问题出发',
+    sec4ColRight:'由平台能力支撑',
+    sec4L1Title:'收集任务材料', sec4L1Body:'输入待核对单据与业务要求，明确处理范围。',
+    sec4L2Title:'补充企业知识', sec4L2Body:'检索制度与规范，为核对提供业务依据。',
+    sec4L3Title:'执行核对步骤', sec4L3Body:'结合模型与工具，逐笔字段完成整理。',
+    sec4L4Title:'输出待复核结果', sec4L4Body:'形成差异清单，交给业务人员确认与处理。',
+    sec4R1Title:'知识匹配', sec4R1Body:'知识调度给出上下文，模型参与理解与信息提取。',
+    sec4R2Title:'流程协作', sec4R2Body:'编排步骤和条件分支，串接各环节输入输出。',
+    sec4R3Title:'工具与系统', sec4R3Body:'按需选择原生工具，直接接触业务操作。',
+    sec4R4Title:'记录与优化', sec4R4Body:'查看执行过程和运行日志，定位问题并迭代流程。',
 
-    // 05 Governance
-    sec5Num:'05 / 企业治理',
-    sec5Title:'为企业环境设计，也为长期运行考虑。',
-    sec5LeftTitle:'私有化部署与运行管理',
-    sec5L1Title:'私有化部署', sec5L1Body:'支持本地环境，在企业选定的环境中运行。',
-    sec5L2Title:'容器化交付', sec5L2Body:'通过 Docker 部署，结合实际环境配置服务。',
-    sec5L3Title:'监控与审计', sec5L3Body:'查看资源状态及运行日志，支持追踪与变更同步。',
-    sec5RightTitle:'从组织结构，到资源使用边界',
-    sec5R1Title:'多用户', sec5R1Body:'按账户组织分类与资源',
-    sec5R2Title:'多部门', sec5R2Body:'以架构规划的企业组织',
-    sec5R3Title:'分级共享', sec5R3Body:'按权限配置资源使用范围',
-    sec5R4Title:'运行记录', sec5R4Body:'追踪任务与工具执行过程',
+    // 05 Delivery
+    sec5Num:'05 / 构建与落地',
+    sec5Title:'从一个场景开始，逐步扩展到团队。',
+    sec5Lead:'围绕业务目标组织所需资源，再验证流程、部署环境与使用方式。',
+    sec5Step1Title:'接入知识', sec5Step1Body:'整理业务资料与知识范围',
+    sec5Step2Title:'配置智能体', sec5Step2Body:'关联角色、模型与工具',
+    sec5Step3Title:'编排流程', sec5Step3Body:'配置步骤与业务规则',
+    sec5Step4Title:'运行与优化', sec5Step4Body:'追踪执行，完善任务效果',
+    sec5PaceTitle:'按业务复杂度，安排落地节奏。',
+    sec5Pace1Num:'01 / 场景梳理', sec5Pace1Title:'确定要解决的问题',
+    sec5Pace1Body:'明确任务边界，输入输出与验收标准，选择一个可优先落地的场景。',
+    sec5Pace2Num:'02 / 原型验证', sec5Pace2Title:'用真实业务测效果',
+    sec5Pace2Body:'以业务样本验证检索、流程执行与工具支援，发现需要改进的环节。',
+    sec5Pace3Num:'03 / 部署推广', sec5Pace3Title:'在企业环境中运行',
+    sec5Pace3Body:'按组织结构配置使用权限，完成部署与培训，再逐步扩大使用范围。',
 
-    // 06 Compare
-    sec6Num:'06 / 产品对比',
-    sec6Title:'不是同一层的产品。',
-    sec6Lead:'Codex 是工程师的编码 Agent；WorkBuddy 是个人桌面 Agent；RAgents 是企业的智能体中台——三者服务的对象不在同一层。',
+    // 06 Governance
+    sec6Num:'06 / 企业治理',
+    sec6Title:'为企业环境设计，也为长期运行考虑。',
+    sec6LeftTitle:'私有化部署与运行管理',
+    sec6L1Title:'私有化部署', sec6L1Body:'支持本地环境，在企业选定的环境中运行。',
+    sec6L2Title:'容器化交付', sec6L2Body:'通过 Docker 部署，结合实际环境配置服务。',
+    sec6L3Title:'监控与审计', sec6L3Body:'查看资源状态及运行日志，支持追踪与变更同步。',
+    sec6RightTitle:'从组织结构，到资源使用边界',
+    sec6R1Title:'多用户', sec6R1Body:'按账户组织分类与资源',
+    sec6R2Title:'多部门', sec6R2Body:'以架构规划的企业组织',
+    sec6R3Title:'分级共享', sec6R3Body:'按权限配置资源使用范围',
+    sec6R4Title:'运行记录', sec6R4Body:'追踪任务与工具执行过程',
+
+    // 07 Compare
+    sec7Num:'07 / 产品对比',
+    sec7Title:'不是同一层的产品。',
+    sec7Lead:'Codex 是工程师的编码 Agent；WorkBuddy 是个人桌面 Agent；RAgents 是企业的智能体中台——三者服务的对象不在同一层。',
     cmpColDim:'维度',
     cmpR1Dim:'部署位置', cmpR1Codex:'工程师电脑 / OpenAI 云沙箱', cmpR1Wb:'个人电脑', cmpR1Us:'企业服务器（私有化）',
     cmpR2Dim:'数据边界', cmpR2Codex:'代码上传云端，国内需中转', cmpR2Wb:'数据分散在各人电脑', cmpR2Us:'数据、知识、凭据全留内网',
@@ -702,10 +767,10 @@ const copy = {
     cmpR6Dim:'谁在治理', cmpR6Codex:'开发者自己', cmpR6Wb:'使用者自己', cmpR6Us:'IT / 管理员统一管控',
     cmpR7Dim:'人走了', cmpR7Codex:'能力随人走', cmpR7Wb:'能力随人走', cmpR7Us:'能力留在公司',
 
-    // 07 Cases
-    sec7Num:'07 / 应用场景',
-    sec7Title:'同一套平台，服务不同业务任务。',
-    sec7Lead:'从可验证的任务切入，覆盖知识、流程和工具。以下为应用方向示例。',
+    // 08 Cases
+    sec8Num:'08 / 应用场景',
+    sec8Title:'同一套平台，服务不同业务任务。',
+    sec8Lead:'从可验证的任务切入，覆盖知识、流程和工具。以下为应用方向示例。',
     case1Cat:'制造与运维', case1Title:'设备知识', case1Sub:'把维修经验用起来',
     case1Body:'把设备维修手册与维修记录整理成排查参考，辅助现场人员处理问题。',
     case2Cat:'零售与供应链', case2Title:'单据核对', case2Sub:'把重复核对做成流程',
@@ -783,54 +848,71 @@ const copy = {
     cap6Body:'Runtime logs and resource state help you diagnose issues and iterate on workflows.',
     cap6Tag1:'Execution trace', cap6Tag2:'Resource monitor', cap6Tag3:'Logs',
 
-    // 03 Workflow
-    sec3Num:'03 / HOW IT WORKS',
-    sec3Title:'One business task, connecting the whole platform.',
-    sec3Lead:'A supply-chain document review illustrates how knowledge, models, workflows and tools work together. Reference design shown.',
-    sec3ColLeft:'From the business problem',
-    sec3ColRight:'Supported by the platform',
-    sec3L1Title:'Collect task materials', sec3L1Body:'Supply documents and requirements to define processing scope.',
-    sec3L2Title:'Augment with knowledge', sec3L2Body:'Retrieve policies and rules to back the review.',
-    sec3L3Title:'Execute review steps', sec3L3Body:'Combine models and tools to check each field.',
-    sec3L4Title:'Output a review draft', sec3L4Body:'Produce a discrepancy list for a human to confirm.',
-    sec3R1Title:'Knowledge matching', sec3R1Body:'Retrieval supplies context; models parse and extract information.',
-    sec3R2Title:'Workflow coordination', sec3R2Body:'Orchestrated steps and branches link inputs to outputs.',
-    sec3R3Title:'Tools & systems', sec3R3Body:'Chosen native tools reach the actual business operations.',
-    sec3R4Title:'Records & iteration', sec3R4Body:'Execution traces and runtime logs surface issues to iterate on.',
+    // 03 Building — skills & tools
+    sec3Num:'03 / BUILDING A DIGITAL WORKER',
+    sec3Title:'Hands and feet — skills and tools.',
+    sec3Lead:'A digital worker = role + skills + tools + memory. Role defines "who," memory keeps "what happened"; skills and tools decide "what it can do" — and both can be created or updated in one sentence of natural language.',
+    sec3Card1Title:'Create by chat',
+    sec3Card1Body:'Describe the goal in one line — the platform matches tools and knowledge, generates a skill and attaches it to the role.',
+    sec3Card2Title:'Update by chat',
+    sec3Card2Body:'When rules or scenarios change, just tell the platform. No rebuild — skills are team assets, created once and shared.',
+    sec3Card3Title:'Tools are the interface layer',
+    sec3Card3Body:'MCP, RPA+ and Native adapters let skills actually reach business systems.',
+    sec3PanelLabel:'conversational skill builder',
+    sec3PanelInput:'Build me a skill that reads invoices and reconciles the amounts',
+    sec3PanelFlowTitle:'Natural language → skill config',
+    sec3PanelStep1:'Parse intent and acceptance criteria',
+    sec3PanelStep2:'Match OCR, amount-comparison tools and related knowledge',
+    sec3PanelStep3:'Generate the skill and attach it to a role',
 
-    // 04 Delivery
-    sec4Num:'04 / DELIVERY',
-    sec4Title:'Start with one scenario, expand to the team.',
-    sec4Lead:'Organize the resources a business goal needs, then validate workflow, environment and adoption.',
-    sec4Step1Title:'Connect knowledge', sec4Step1Body:'Assemble the documents and knowledge scope',
-    sec4Step2Title:'Configure agents', sec4Step2Body:'Bind roles, models and tools',
-    sec4Step3Title:'Orchestrate workflows', sec4Step3Body:'Define steps and business rules',
-    sec4Step4Title:'Run and iterate', sec4Step4Body:'Trace execution, refine outcomes',
-    sec4PaceTitle:'Pace the rollout by business complexity.',
-    sec4Pace1Num:'01 / SCOPING', sec4Pace1Title:'Identify the problem',
-    sec4Pace1Body:'Clarify task boundaries, inputs, outputs and acceptance criteria; pick a first scenario worth prioritizing.',
-    sec4Pace2Num:'02 / PROTOTYPE', sec4Pace2Title:'Validate with real business',
-    sec4Pace2Body:'Test retrieval, workflow execution and tool support against real samples; find what to improve.',
-    sec4Pace3Num:'03 / ROLLOUT', sec4Pace3Title:'Run in the enterprise',
-    sec4Pace3Body:'Configure permissions by org structure, complete deployment and training, then expand adoption.',
+    // 04 Workflow
+    sec4Num:'04 / HOW IT WORKS',
+    sec4Title:'One business task, connecting the whole platform.',
+    sec4Lead:'A supply-chain document review illustrates how knowledge, models, workflows and tools work together. Reference design shown.',
+    sec4ColLeft:'From the business problem',
+    sec4ColRight:'Supported by the platform',
+    sec4L1Title:'Collect task materials', sec4L1Body:'Supply documents and requirements to define processing scope.',
+    sec4L2Title:'Augment with knowledge', sec4L2Body:'Retrieve policies and rules to back the review.',
+    sec4L3Title:'Execute review steps', sec4L3Body:'Combine models and tools to check each field.',
+    sec4L4Title:'Output a review draft', sec4L4Body:'Produce a discrepancy list for a human to confirm.',
+    sec4R1Title:'Knowledge matching', sec4R1Body:'Retrieval supplies context; models parse and extract information.',
+    sec4R2Title:'Workflow coordination', sec4R2Body:'Orchestrated steps and branches link inputs to outputs.',
+    sec4R3Title:'Tools & systems', sec4R3Body:'Chosen native tools reach the actual business operations.',
+    sec4R4Title:'Records & iteration', sec4R4Body:'Execution traces and runtime logs surface issues to iterate on.',
 
-    // 05 Governance
-    sec5Num:'05 / GOVERNANCE',
-    sec5Title:'Designed for enterprise environments and long-term operation.',
-    sec5LeftTitle:'Private deployment & operations',
-    sec5L1Title:'Private deployment', sec5L1Body:'Runs inside the environment your enterprise chooses.',
-    sec5L2Title:'Container delivery', sec5L2Body:'Ships with Docker and adapts to the target environment.',
-    sec5L3Title:'Monitor & audit', sec5L3Body:'Resource state and runtime logs for traceability and change sync.',
-    sec5RightTitle:'From org structure to resource boundaries',
-    sec5R1Title:'Multi-user', sec5R1Body:'Organize accounts and their resources',
-    sec5R2Title:'Multi-department', sec5R2Body:'Model your enterprise structure',
-    sec5R3Title:'Tiered sharing', sec5R3Body:'Configure resource scope by permission',
-    sec5R4Title:'Runtime records', sec5R4Body:'Trace task and tool execution',
+    // 05 Delivery
+    sec5Num:'05 / DELIVERY',
+    sec5Title:'Start with one scenario, expand to the team.',
+    sec5Lead:'Organize the resources a business goal needs, then validate workflow, environment and adoption.',
+    sec5Step1Title:'Connect knowledge', sec5Step1Body:'Assemble the documents and knowledge scope',
+    sec5Step2Title:'Configure agents', sec5Step2Body:'Bind roles, models and tools',
+    sec5Step3Title:'Orchestrate workflows', sec5Step3Body:'Define steps and business rules',
+    sec5Step4Title:'Run and iterate', sec5Step4Body:'Trace execution, refine outcomes',
+    sec5PaceTitle:'Pace the rollout by business complexity.',
+    sec5Pace1Num:'01 / SCOPING', sec5Pace1Title:'Identify the problem',
+    sec5Pace1Body:'Clarify task boundaries, inputs, outputs and acceptance criteria; pick a first scenario worth prioritizing.',
+    sec5Pace2Num:'02 / PROTOTYPE', sec5Pace2Title:'Validate with real business',
+    sec5Pace2Body:'Test retrieval, workflow execution and tool support against real samples; find what to improve.',
+    sec5Pace3Num:'03 / ROLLOUT', sec5Pace3Title:'Run in the enterprise',
+    sec5Pace3Body:'Configure permissions by org structure, complete deployment and training, then expand adoption.',
 
-    // 06 Compare
-    sec6Num:'06 / COMPARISON',
-    sec6Title:'Different layers, different value.',
-    sec6Lead:'Codex is a coding agent for engineers; WorkBuddy is a personal desktop agent; RAgents is an enterprise agent hub — they serve different layers.',
+    // 06 Governance
+    sec6Num:'06 / GOVERNANCE',
+    sec6Title:'Designed for enterprise environments and long-term operation.',
+    sec6LeftTitle:'Private deployment & operations',
+    sec6L1Title:'Private deployment', sec6L1Body:'Runs inside the environment your enterprise chooses.',
+    sec6L2Title:'Container delivery', sec6L2Body:'Ships with Docker and adapts to the target environment.',
+    sec6L3Title:'Monitor & audit', sec6L3Body:'Resource state and runtime logs for traceability and change sync.',
+    sec6RightTitle:'From org structure to resource boundaries',
+    sec6R1Title:'Multi-user', sec6R1Body:'Organize accounts and their resources',
+    sec6R2Title:'Multi-department', sec6R2Body:'Model your enterprise structure',
+    sec6R3Title:'Tiered sharing', sec6R3Body:'Configure resource scope by permission',
+    sec6R4Title:'Runtime records', sec6R4Body:'Trace task and tool execution',
+
+    // 07 Compare
+    sec7Num:'07 / COMPARISON',
+    sec7Title:'Different layers, different value.',
+    sec7Lead:'Codex is a coding agent for engineers; WorkBuddy is a personal desktop agent; RAgents is an enterprise agent hub — they serve different layers.',
     cmpColDim:'Dimension',
     cmpR1Dim:'Deployment', cmpR1Codex:'Engineer laptop / OpenAI cloud sandbox', cmpR1Wb:'Personal computer', cmpR1Us:'Enterprise server (private deployment)',
     cmpR2Dim:'Data boundary', cmpR2Codex:'Code uploaded to cloud; needs relay in China', cmpR2Wb:'Data scattered across personal machines', cmpR2Us:'Data, knowledge and credentials stay on-prem',
@@ -840,10 +922,10 @@ const copy = {
     cmpR6Dim:'Who governs', cmpR6Codex:'Developers themselves', cmpR6Wb:'Users themselves', cmpR6Us:'IT / admins, centrally',
     cmpR7Dim:'When people leave', cmpR7Codex:'Capability leaves with them', cmpR7Wb:'Capability leaves with them', cmpR7Us:'Capability stays with the company',
 
-    // 07 Cases
-    sec7Num:'07 / USE CASES',
-    sec7Title:'One platform, serving different business tasks.',
-    sec7Lead:'Start with verifiable tasks covering knowledge, workflow and tools. Reference directions shown.',
+    // 08 Cases
+    sec8Num:'08 / USE CASES',
+    sec8Title:'One platform, serving different business tasks.',
+    sec8Lead:'Start with verifiable tasks covering knowledge, workflow and tools. Reference directions shown.',
     case1Cat:'MANUFACTURING & OPERATIONS', case1Title:'Equipment knowledge', case1Sub:'Put repair experience to work',
     case1Body:'Turn equipment manuals and repair logs into a searchable reference for on-site engineers.',
     case2Cat:'RETAIL & SUPPLY CHAIN', case2Title:'Document review', case2Sub:'Turn repetitive checks into a workflow',
