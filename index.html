@@ -196,7 +196,18 @@
     .gov-list b{color:var(--ink);font-weight:600;font-size:14.5px}
     .gov-list span{color:var(--muted);font-size:13.5px}
 
-    /* Section 06 — cases */
+    /* Section 06 — compare */
+    .compare-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line);background:#fff;-webkit-overflow-scrolling:touch}
+    .compare-table{width:100%;min-width:760px;border-collapse:collapse;font-size:14px}
+    .compare-table th,.compare-table td{padding:16px 20px;text-align:left;vertical-align:top;line-height:1.55}
+    .compare-table thead th{background:var(--soft);color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--line);white-space:nowrap}
+    .compare-table thead th.us{color:var(--blue);background:var(--wash)}
+    .compare-table tbody th{width:130px;color:var(--muted);font-weight:600;font-size:13px;border-bottom:1px solid var(--line-2);white-space:nowrap}
+    .compare-table tbody td{color:var(--body);border-bottom:1px solid var(--line-2)}
+    .compare-table tbody td.us{background:var(--wash);color:var(--ink);font-weight:600}
+    .compare-table tbody tr:last-child th,.compare-table tbody tr:last-child td{border-bottom:0}
+
+    /* Section 07 — cases */
     .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .case{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff}
     .case:hover{border-color:#c7d2fe;box-shadow:0 12px 40px rgba(37,99,235,.06)}
@@ -476,13 +487,45 @@
   </div>
 </section>
 
-<!-- 06 · Cases -->
-<section id="cases">
+<!-- 06 · Compare -->
+<section id="compare">
   <div class="wrap">
     <header class="sec-head">
       <div class="sec-num" data-i18n="sec6Num"></div>
       <h2 class="sec-title" data-i18n="sec6Title"></h2>
       <p class="sec-lead" data-i18n="sec6Lead"></p>
+    </header>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th data-i18n="cmpColDim"></th>
+            <th>Codex</th>
+            <th>WorkBuddy</th>
+            <th class="us">RAgents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th data-i18n="cmpR1Dim"></th><td data-i18n="cmpR1Codex"></td><td data-i18n="cmpR1Wb"></td><td class="us" data-i18n="cmpR1Us"></td></tr>
+          <tr><th data-i18n="cmpR2Dim"></th><td data-i18n="cmpR2Codex"></td><td data-i18n="cmpR2Wb"></td><td class="us" data-i18n="cmpR2Us"></td></tr>
+          <tr><th data-i18n="cmpR3Dim"></th><td data-i18n="cmpR3Codex"></td><td data-i18n="cmpR3Wb"></td><td class="us" data-i18n="cmpR3Us"></td></tr>
+          <tr><th data-i18n="cmpR4Dim"></th><td data-i18n="cmpR4Codex"></td><td data-i18n="cmpR4Wb"></td><td class="us" data-i18n="cmpR4Us"></td></tr>
+          <tr><th data-i18n="cmpR5Dim"></th><td data-i18n="cmpR5Codex"></td><td data-i18n="cmpR5Wb"></td><td class="us" data-i18n="cmpR5Us"></td></tr>
+          <tr><th data-i18n="cmpR6Dim"></th><td data-i18n="cmpR6Codex"></td><td data-i18n="cmpR6Wb"></td><td class="us" data-i18n="cmpR6Us"></td></tr>
+          <tr><th data-i18n="cmpR7Dim"></th><td data-i18n="cmpR7Codex"></td><td data-i18n="cmpR7Wb"></td><td class="us" data-i18n="cmpR7Us"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · Cases -->
+<section id="cases">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec7Num"></div>
+      <h2 class="sec-title" data-i18n="sec7Title"></h2>
+      <p class="sec-lead" data-i18n="sec7Lead"></p>
     </header>
     <div class="case-grid">
       <article class="case">
@@ -646,10 +689,23 @@ const copy = {
     sec5R3Title:'分级共享', sec5R3Body:'按权限配置资源使用范围',
     sec5R4Title:'运行记录', sec5R4Body:'追踪任务与工具执行过程',
 
-    // 06 Cases
-    sec6Num:'06 / 应用场景',
-    sec6Title:'同一套平台，服务不同业务任务。',
-    sec6Lead:'从可验证的任务切入，覆盖知识、流程和工具。以下为应用方向示例。',
+    // 06 Compare
+    sec6Num:'06 / 产品对比',
+    sec6Title:'不是同一层的产品。',
+    sec6Lead:'Codex 是工程师的编码 Agent；WorkBuddy 是个人桌面 Agent；RAgents 是企业的智能体中台——三者服务的对象不在同一层。',
+    cmpColDim:'维度',
+    cmpR1Dim:'部署位置', cmpR1Codex:'工程师电脑 / OpenAI 云沙箱', cmpR1Wb:'个人电脑', cmpR1Us:'企业服务器（私有化）',
+    cmpR2Dim:'数据边界', cmpR2Codex:'代码上传云端，国内需中转', cmpR2Wb:'数据分散在各人电脑', cmpR2Us:'数据、知识、凭据全留内网',
+    cmpR3Dim:'权限模型', cmpR3Codex:'单用户', cmpR3Wb:'单用户', cmpR3Us:'租户 / 部门 / 角色三级 RBAC',
+    cmpR4Dim:'知识来源', cmpR4Codex:'代码仓库', cmpR4Wb:'本机文件 + 网页', cmpR4Us:'企业知识库 + 业务系统',
+    cmpR5Dim:'交付物', cmpR5Codex:'一次任务 = 一个 PR', cmpR5Wb:'一次任务 = 一份文件', cmpR5Us:'一个常驻的数字员工',
+    cmpR6Dim:'谁在治理', cmpR6Codex:'开发者自己', cmpR6Wb:'使用者自己', cmpR6Us:'IT / 管理员统一管控',
+    cmpR7Dim:'人走了', cmpR7Codex:'能力随人走', cmpR7Wb:'能力随人走', cmpR7Us:'能力留在公司',
+
+    // 07 Cases
+    sec7Num:'07 / 应用场景',
+    sec7Title:'同一套平台，服务不同业务任务。',
+    sec7Lead:'从可验证的任务切入，覆盖知识、流程和工具。以下为应用方向示例。',
     case1Cat:'制造与运维', case1Title:'设备知识', case1Sub:'把维修经验用起来',
     case1Body:'把设备维修手册与维修记录整理成排查参考，辅助现场人员处理问题。',
     case2Cat:'零售与供应链', case2Title:'单据核对', case2Sub:'把重复核对做成流程',
@@ -771,10 +827,23 @@ const copy = {
     sec5R3Title:'Tiered sharing', sec5R3Body:'Configure resource scope by permission',
     sec5R4Title:'Runtime records', sec5R4Body:'Trace task and tool execution',
 
-    // 06 Cases
-    sec6Num:'06 / USE CASES',
-    sec6Title:'One platform, serving different business tasks.',
-    sec6Lead:'Start with verifiable tasks covering knowledge, workflow and tools. Reference directions shown.',
+    // 06 Compare
+    sec6Num:'06 / COMPARISON',
+    sec6Title:'Different layers, different value.',
+    sec6Lead:'Codex is a coding agent for engineers; WorkBuddy is a personal desktop agent; RAgents is an enterprise agent hub — they serve different layers.',
+    cmpColDim:'Dimension',
+    cmpR1Dim:'Deployment', cmpR1Codex:'Engineer laptop / OpenAI cloud sandbox', cmpR1Wb:'Personal computer', cmpR1Us:'Enterprise server (private deployment)',
+    cmpR2Dim:'Data boundary', cmpR2Codex:'Code uploaded to cloud; needs relay in China', cmpR2Wb:'Data scattered across personal machines', cmpR2Us:'Data, knowledge and credentials stay on-prem',
+    cmpR3Dim:'Permissions', cmpR3Codex:'Single user', cmpR3Wb:'Single user', cmpR3Us:'Tenant / department / role three-tier RBAC',
+    cmpR4Dim:'Knowledge source', cmpR4Codex:'Code repositories', cmpR4Wb:'Local files + web pages', cmpR4Us:'Enterprise knowledge base + business systems',
+    cmpR5Dim:'Deliverable', cmpR5Codex:'One task = one PR', cmpR5Wb:'One task = one document', cmpR5Us:'A resident digital worker',
+    cmpR6Dim:'Who governs', cmpR6Codex:'Developers themselves', cmpR6Wb:'Users themselves', cmpR6Us:'IT / admins, centrally',
+    cmpR7Dim:'When people leave', cmpR7Codex:'Capability leaves with them', cmpR7Wb:'Capability leaves with them', cmpR7Us:'Capability stays with the company',
+
+    // 07 Cases
+    sec7Num:'07 / USE CASES',
+    sec7Title:'One platform, serving different business tasks.',
+    sec7Lead:'Start with verifiable tasks covering knowledge, workflow and tools. Reference directions shown.',
     case1Cat:'MANUFACTURING & OPERATIONS', case1Title:'Equipment knowledge', case1Sub:'Put repair experience to work',
     case1Body:'Turn equipment manuals and repair logs into a searchable reference for on-site engineers.',
     case2Cat:'RETAIL & SUPPLY CHAIN', case2Title:'Document review', case2Sub:'Turn repetitive checks into a workflow',
