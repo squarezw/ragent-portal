@@ -3,27 +3,847 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="RAgents enterprise AI agent platform" />
-  <title>RAgents.net · Enterprise AI Agent Platform</title>
+  <meta name="theme-color" content="#2563eb" />
+
+  <title>RAgents.net · 企业级智能体中台 · Enterprise AI Agent Platform</title>
+  <meta name="description" content="RAgents.net 企业级智能体中台（AI Agent Hub）—— 连接企业知识、模型与业务流程，一站式完成 RAG 知识库、流程编排、多智能体协作、工具（MCP / RPA+）接入与私有化部署，助力企业级 AI 快速落地。" />
+  <meta name="keywords" content="智能体中台, 企业智能体平台, AI Agent, AI Agent 平台, 企业级 AI, 企业级 AI 落地, 企业数字员工, 数字员工, RAG, RAG 知识库, 知识库问答, 多智能体协作, 流程编排, 工作流编排, 私有化部署, 本地化部署, MCP, RPA, RPA+, LLM, OCR, TTS, enterprise AI agent platform, AI agent hub, enterprise AI adoption, digital workforce, RAG platform, workflow orchestration, multi-agent collaboration, private deployment" />
+  <meta name="author" content="MOUQITECH" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="canonical" href="https://www.ragents.net/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.ragents.net/" />
+  <link rel="alternate" hreflang="en" href="https://www.ragents.net/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ragents.net/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RAgents.net" />
+  <meta property="og:title" content="RAgents.net · 企业级智能体中台" />
+  <meta property="og:description" content="连接企业知识、模型与业务流程，一站式完成 RAG、流程编排、多智能体协作与私有化部署，助力企业级 AI 落地。" />
+  <meta property="og:url" content="https://www.ragents.net/" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RAgents.net · Enterprise AI Agent Platform" />
+  <meta name="twitter:description" content="Enterprise AI agent hub — RAG, workflow orchestration, multi-agent, MCP / RPA+, private deployment." />
+
+  <!-- Perf hints -->
+  <link rel="preconnect" href="https://tally.so" crossorigin />
+  <link rel="dns-prefetch" href="https://tally.so" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ragents.net/#org",
+        "name": "RAgents",
+        "legalName": "MOUQITECH",
+        "url": "https://www.ragents.net/",
+        "sameAs": ["https://www.ragents.net/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ragents.net/#site",
+        "url": "https://www.ragents.net/",
+        "name": "RAgents.net",
+        "inLanguage": ["zh-CN", "en"],
+        "publisher": {"@id": "https://www.ragents.net/#org"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "RAgents 企业级智能体中台",
+        "alternateName": "RAgents Enterprise AI Agent Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Docker",
+        "url": "https://www.ragents.net/",
+        "publisher": {"@id": "https://www.ragents.net/#org"},
+        "description": "面向企业的智能体中台，覆盖 RAG 知识库、流程编排、多智能体协作、工具接入（MCP / RPA+）与私有化部署，帮助企业级 AI 快速落地。",
+        "featureList": [
+          "企业知识库 RAG",
+          "多智能体协作与流程编排",
+          "MCP / RPA+ 工具接入",
+          "私有化部署与多租户治理",
+          "LLM / OCR / TTS 模型调度",
+          "运行监控与审计"
+        ],
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+      }
+    ]
+  }
+  </script>
   <style>
-    :root{--ink:#172554;--muted:#64748b;--blue:#2563eb;--indigo:#1d4ed8;--purple:#4338ca;--line:#e5e7eb;--soft:#f8fafc;--wash:#eef4ff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f1f5f9;position:sticky;top:0;background:#ffffffdd;backdrop-filter:blur(16px);z-index:10}.brand{font-weight:800;font-size:21px;letter-spacing:-.04em}.brand small{font-size:11px;color:var(--blue);margin-left:2px}.navlinks{display:flex;gap:26px;align-items:center;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--blue)}button,.btn{border:0;border-radius:999px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer}.primary{background:var(--ink);color:#fff}.outline{background:#fff;border:1px solid var(--line)}.lang{background:#fff;border:1px solid var(--line);padding:8px 12px;color:var(--muted)}
-    .hero{padding:86px 0 0;background:#fff}.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--muted);font-size:11px;letter-spacing:.12em;font-weight:800}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--blue)}h1{font-size:clamp(48px,6vw,78px);line-height:1.04;letter-spacing:-.07em;margin:20px 0 22px;max-width:620px}h1 span{color:var(--blue)}.lead{max-width:540px;margin:0 0 28px;font-size:16px;color:var(--muted)}.actions{display:flex;gap:12px;flex-wrap:wrap}.hero-panel{padding:26px;background:#f1f5f9;border-radius:18px}.hero-panel .panel-label{font-size:12px;color:var(--blue);font-weight:800;margin-bottom:16px}.hero-panel .panel-input{background:#fff;border-radius:10px;padding:14px 16px;color:#334155;font-weight:700;margin-bottom:12px}.hero-panel .panel-flow{background:#172554;color:#fff;border-radius:10px;padding:18px}.hero-panel .panel-flow strong{display:block;font-size:15px;margin-bottom:9px}.hero-panel .panel-flow span{display:block;color:#bfdbfe;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:62px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}.stat{background:#fff;padding:22px 18px}.stat b{font-size:17px}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
-    section{padding:96px 0}.sectionhead{max-width:700px;margin-bottom:42px}.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.15em}.sectionhead h2{font-size:clamp(32px,4vw,54px);line-height:1.1;letter-spacing:-.05em;margin:12px 0}.sectionhead p{color:var(--muted);font-size:17px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;min-height:190px}.card:hover{border-color:#bfdbfe;box-shadow:0 18px 50px #1d4ed80f}.num{color:var(--blue);font-size:12px;font-weight:800}.card h3{font-size:21px;margin:12px 0 8px}.card p{color:var(--muted);margin:0}.soft{background:var(--soft)}.matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.pill{padding:22px;border-radius:14px;background:#fff;border:1px solid var(--line)}.pill b{display:block;font-size:17px;margin-bottom:5px}.pill small{color:var(--muted)}.workflow{background:var(--ink);color:#fff}.workflow .sectionhead p{color:#94a3b8}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#172554;border:1px solid #263a74;border-radius:16px;padding:22px}.step strong{color:#93c5fd}.step p{color:#cbd5e1}.trust{display:grid;grid-template-columns:1fr 1fr;gap:18px}.trust .card{background:var(--wash)}.cta{padding:78px 0;background:linear-gradient(135deg,var(--blue),var(--indigo) 60%,var(--purple));color:#fff}.cta .sectionhead p{color:#dbeafe}.cta .outline{color:var(--ink)}footer{padding:26px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}.modal{position:fixed;inset:0;z-index:30;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:24px}.modal.open{display:flex}.modal-card{width:min(900px,100%);height:min(760px,90vh);background:#fff;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 24px 90px #02061766}.modal-card iframe{width:100%;height:100%;border:0}.modal-close{position:absolute;right:14px;top:14px;z-index:2;width:38px;height:38px;padding:0;background:#ffffffdd;color:#334155;font-size:24px;line-height:1}@media(max-width:800px){.navlinks a{display:none}.wrap{width:min(100% - 32px,600px)}.hero{padding:78px 0 60px}.stats,.grid3,.matrix,.steps,.trust{grid-template-columns:1fr 1fr}section{padding:68px 0}}@media(max-width:520px){.stats,.grid3,.matrix,.steps,.trust{grid-template-columns:1fr}.nav{height:64px}}
+    :root{
+      --ink:#0b1a3b;--body:#172554;--muted:#64748b;--soft-ink:#94a3b8;
+      --blue:#2563eb;--blue-600:#1d4ed8;--indigo:#4338ca;
+      --line:#e5e7eb;--line-2:#eef2f7;--soft:#f8fafc;--wash:#eef4ff;
+      --dark:#0b1a3b;--dark-2:#12224a;--dark-line:#1f3169;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--body);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#fff;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+
+    /* Nav */
+    .nav{height:72px;display:flex;align-items:center;border-bottom:1px solid var(--line-2);position:sticky;top:0;background:#ffffffdd;backdrop-filter:blur(16px);z-index:20}
+    .nav .row{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{font-weight:800;font-size:20px;letter-spacing:-.03em;color:var(--ink)}
+    .brand small{font-size:11px;color:var(--blue);margin-left:2px;font-weight:800}
+    .navlinks{display:flex;gap:28px;align-items:center;color:var(--muted);font-size:13.5px}
+    .navlinks a:hover{color:var(--blue)}
+    button,.btn{border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:600;cursor:pointer;letter-spacing:-.005em}
+    .primary{background:var(--blue);color:#fff}
+    .primary:hover{background:var(--blue-600)}
+    .outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .outline:hover{border-color:#c7d2fe;color:var(--blue)}
+    .lang{background:#fff;border:1px solid var(--line);padding:7px 12px;color:var(--muted);font-weight:600;font-size:12px}
+    .lang:hover{color:var(--blue);border-color:#c7d2fe}
+
+    /* Hero */
+    .hero{padding:88px 0 44px;background:#fff}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;color:var(--muted);font-size:11px;letter-spacing:.18em;font-weight:700;text-transform:uppercase}
+    .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+    h1{font-size:clamp(44px,5.4vw,72px);line-height:1.05;letter-spacing:-.055em;margin:22px 0 22px;color:var(--ink);font-weight:800}
+    h1 .accent{color:var(--blue)}
+    .lead{max-width:520px;margin:0 0 26px;font-size:16px;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+    .hero-tags{color:var(--muted);font-size:12.5px;letter-spacing:.02em}
+    .hero-tags span+span:before{content:" · ";color:var(--line);padding:0 6px}
+    .hero-panel{padding:22px;background:#f1f5f9;border-radius:16px}
+    .panel-label{font-size:11.5px;color:var(--blue);font-weight:700;margin-bottom:14px;letter-spacing:.02em}
+    .panel-input{background:#fff;border-radius:10px;padding:14px 16px;color:#334155;font-weight:600;margin-bottom:12px;font-size:14px}
+    .panel-flow{background:var(--dark);color:#fff;border-radius:12px;padding:18px 20px}
+    .panel-flow strong{display:block;font-size:14.5px;margin-bottom:12px;color:#fff;letter-spacing:.01em}
+    .panel-flow ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .panel-flow li{color:#cbd5e1;font-size:12.5px;line-height:1.6}
+    .panel-flow li b{color:#93c5fd;font-weight:700;margin-right:8px;font-variant-numeric:tabular-nums}
+
+    /* Pillars strip */
+    .pillars{background:var(--soft);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+    .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
+    .pillar{background:var(--soft);padding:28px 24px}
+    .pillar:first-child{padding-left:0}
+    .pillar:last-child{padding-right:0}
+    .pillar b{display:block;font-size:16px;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;font-weight:700}
+    .pillar span{display:block;color:var(--muted);font-size:12.5px}
+
+    /* Section head */
+    section{padding:90px 0}
+    .sec-num{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.14em;margin-bottom:18px}
+    .sec-title{font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.04em;margin:0 0 14px;max-width:820px;color:var(--ink);font-weight:800}
+    .sec-lead{color:var(--muted);font-size:15.5px;max-width:720px;margin:0}
+    .sec-head{margin-bottom:48px}
+
+    /* Section 01 — platform */
+    .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .p-card{border-top:1px solid var(--line);padding:24px 0 0;padding-right:16px}
+    .p-card .num{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.08em}
+    .p-card h3{font-size:19px;margin:10px 0 10px;color:var(--ink);letter-spacing:-.02em;font-weight:700}
+    .p-card p{color:var(--muted);margin:0;font-size:14.5px}
+
+    /* Section 02 — capabilities */
+    .soft{background:var(--soft)}
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .cap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+    .cap:hover{border-color:#c7d2fe;box-shadow:0 12px 40px rgba(37,99,235,.06)}
+    .cap-num{color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.12em}
+    .cap h3{font-size:19px;margin:10px 0 10px;color:var(--ink);letter-spacing:-.02em;font-weight:700}
+    .cap p{color:var(--muted);margin:0 0 16px;font-size:14px}
+    .cap-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+    .cap-tags li{color:var(--blue);font-size:12px;font-weight:600;background:var(--wash);border-radius:999px;padding:4px 10px}
+
+    /* Section 03 — workflow (dark) */
+    .workflow{background:var(--dark);color:#e2e8f0}
+    .workflow .sec-num{color:#7ea3ff}
+    .workflow .sec-title{color:#fff}
+    .workflow .sec-lead{color:#94a3b8}
+    .wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .wf-col{background:var(--dark-2);border:1px solid var(--dark-line);border-radius:16px;padding:26px 26px 8px}
+    .wf-col-title{color:#fff;font-size:16px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+    .wf-col ol{list-style:none;margin:0;padding:0}
+    .wf-col li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--dark-line)}
+    .wf-col li:last-child{border-bottom:0}
+    .wf-idx{color:#93c5fd;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+    .wf-col strong{display:block;color:#fff;font-size:14.5px;margin-bottom:4px;font-weight:600;letter-spacing:-.005em}
+    .wf-col span{color:#94a3b8;font-size:13px;line-height:1.65;display:block}
+
+    /* Section 04 — delivery */
+    .delivery-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+    .d-step b{display:block;color:var(--ink);font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+    .d-step b:before{content:"";display:block;width:28px;border-top:2px solid var(--blue);margin-bottom:14px}
+    .d-step span{color:var(--muted);font-size:13.5px}
+    .pace-title{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin:0 0 20px}
+    .pace-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .pace{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+    .pace .num{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.08em}
+    .pace h4{font-size:17px;margin:10px 0 8px;color:var(--ink);letter-spacing:-.015em;font-weight:700}
+    .pace p{color:var(--muted);margin:0;font-size:13.5px}
+
+    /* Section 05 — governance */
+    .gov-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .gov-col h3{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin:0 0 18px}
+    .gov-list{margin:0;padding:0;list-style:none}
+    .gov-list li{padding:16px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:160px 1fr;gap:24px}
+    .gov-list li:last-child{border-bottom:1px solid var(--line)}
+    .gov-list b{color:var(--ink);font-weight:600;font-size:14.5px}
+    .gov-list span{color:var(--muted);font-size:13.5px}
+
+    /* Section 06 — cases */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .case{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff}
+    .case:hover{border-color:#c7d2fe;box-shadow:0 12px 40px rgba(37,99,235,.06)}
+    .case .cat{color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.12em}
+    .case h3{color:var(--blue);font-size:22px;margin:12px 0 4px;letter-spacing:-.02em;font-weight:800}
+    .case .sub{color:var(--ink);font-size:15px;font-weight:600;margin-bottom:12px}
+    .case p{color:var(--muted);margin:0;font-size:13.5px}
+
+    /* Finale CTA */
+    .finale{padding:88px 0 96px;border-top:1px solid var(--line-2)}
+    .finale .sec-num{color:var(--blue)}
+    .fin-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0 40px}
+    .fin-col b{display:block;color:var(--ink);font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+    .fin-col span{color:var(--muted);font-size:13.5px}
+    .fin-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .fin-site{color:var(--muted);font-size:13px}
+    .fin-site a{color:var(--blue);font-weight:600}
+
+    /* Footer */
+    footer{padding:26px 0;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line-2)}
+    footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    /* Modal (Tally) */
+    .modal{position:fixed;inset:0;z-index:40;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:24px}
+    .modal.open{display:flex}
+    .modal-card{width:min(900px,100%);height:min(760px,90vh);background:#fff;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 24px 90px #02061766}
+    .modal-card iframe{width:100%;height:100%;border:0}
+    .modal-close{position:absolute;right:14px;top:14px;z-index:2;width:38px;height:38px;padding:0;background:#ffffffdd;color:#334155;font-size:24px;line-height:1;border-radius:999px}
+
+    /* Responsive */
+    @media(max-width:960px){
+      .hero-grid{grid-template-columns:1fr;gap:44px}
+      .pillar-grid,.platform-grid,.cap-grid,.wf-grid,.delivery-steps,.pace-grid,.gov-grid,.case-grid,.fin-cols{grid-template-columns:1fr 1fr}
+      .gov-list li{grid-template-columns:1fr;gap:6px}
+      .navlinks a{display:none}
+      section{padding:68px 0}
+      .hero{padding:64px 0 40px}
+    }
+    @media(max-width:560px){
+      .pillar-grid,.platform-grid,.cap-grid,.wf-grid,.delivery-steps,.pace-grid,.gov-grid,.case-grid,.fin-cols{grid-template-columns:1fr}
+      .nav{height:60px}
+      .brand{font-size:18px}
+    }
   </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between"><a class="brand" href="#">RAgents<small>.net</small></a><div class="navlinks"><a href="#why" data-i18n="navWhy"></a><a href="#capabilities" data-i18n="navCapabilities"></a><a href="#workflow" data-i18n="navWorkflow"></a><a href="#cases" data-i18n="navCases"></a><button class="lang" id="language">EN</button><a class="btn primary" href="#contact" data-i18n="navCta"></a></div></div></nav>
+
+<nav class="nav">
+  <div class="wrap"><div class="row">
+    <a class="brand" href="#">RAgents<small>.net</small></a>
+    <div class="navlinks">
+      <a href="#platform" data-i18n="navPlatform"></a>
+      <a href="#capabilities" data-i18n="navCapabilities"></a>
+      <a href="#cases" data-i18n="navCases"></a>
+      <a href="#governance" data-i18n="navGovernance"></a>
+      <button class="lang" id="language">EN</button>
+      <a class="btn primary" href="#contact" data-i18n="navCta"></a>
+    </div>
+  </div></div>
+</nav>
+
 <main>
-<section class="hero"><div class="wrap"><div class="hero-layout"><div><div class="eyebrow"><i></i><span data-i18n="eyebrow"></span></div><h1><span data-i18n="heroTitle"></span></h1><p class="lead" data-i18n="heroLead"></p><div class="actions"><a class="btn primary" href="#contact" data-i18n="heroCta"></a><a class="btn outline" href="#capabilities" data-i18n="heroSecondary"></a></div></div><div class="hero-panel"><div class="panel-label">RAgents.net · <span data-i18n="panelLabel"></span></div><div class="panel-input" data-i18n="panelInput"></div><div class="panel-flow"><strong data-i18n="panelFlowTitle"></strong><span data-i18n="panelFlowBody"></span></div></div></div><div class="stats"><div class="stat"><b data-i18n="stat1Value"></b><span data-i18n="stat1"></span></div><div class="stat"><b data-i18n="stat2Value"></b><span data-i18n="stat2"></span></div><div class="stat"><b data-i18n="stat3Value"></b><span data-i18n="stat3"></span></div><div class="stat"><b data-i18n="stat4Value"></b><span data-i18n="stat4"></span></div></div></div></section>
-<section id="why"><div class="wrap"><div class="sectionhead"><div class="kicker">WHY RAGENTS</div><h2 data-i18n="whyTitle"></h2><p data-i18n="whyLead"></p></div><div class="grid3"><article class="card"><span class="num">01</span><h3 data-i18n="why1Title"></h3><p data-i18n="why1Body"></p></article><article class="card"><span class="num">02</span><h3 data-i18n="why2Title"></h3><p data-i18n="why2Body"></p></article><article class="card"><span class="num">03</span><h3 data-i18n="why3Title"></h3><p data-i18n="why3Body"></p></article></div></div></section>
-<section id="capabilities" class="soft"><div class="wrap"><div class="sectionhead"><div class="kicker">CAPABILITY MATRIX</div><h2 data-i18n="capTitle"></h2><p data-i18n="capLead"></p></div><div class="matrix"><div class="pill"><b data-i18n="cap1"></b><small data-i18n="cap1Body"></small></div><div class="pill"><b data-i18n="cap2"></b><small data-i18n="cap2Body"></small></div><div class="pill"><b data-i18n="cap3"></b><small data-i18n="cap3Body"></small></div><div class="pill"><b data-i18n="cap4"></b><small data-i18n="cap4Body"></small></div><div class="pill"><b data-i18n="cap5"></b><small data-i18n="cap5Body"></small></div><div class="pill"><b data-i18n="cap6"></b><small data-i18n="cap6Body"></small></div><div class="pill"><b data-i18n="cap7"></b><small data-i18n="cap7Body"></small></div><div class="pill"><b data-i18n="cap8"></b><small data-i18n="cap8Body"></small></div></div></div></section>
-<section id="workflow" class="workflow"><div class="wrap"><div class="sectionhead"><div class="kicker" style="color:#93c5fd">HOW IT WORKS</div><h2 data-i18n="workflowTitle"></h2><p data-i18n="workflowLead"></p></div><div class="steps"><div class="step"><strong>01</strong><h3 data-i18n="step1Title"></h3><p data-i18n="step1Body"></p></div><div class="step"><strong>02</strong><h3 data-i18n="step2Title"></h3><p data-i18n="step2Body"></p></div><div class="step"><strong>03</strong><h3 data-i18n="step3Title"></h3><p data-i18n="step3Body"></p></div><div class="step"><strong>04</strong><h3 data-i18n="step4Title"></h3><p data-i18n="step4Body"></p></div></div></div></section>
-<section id="cases"><div class="wrap"><div class="sectionhead"><div class="kicker">ENTERPRISE READY</div><h2 data-i18n="casesTitle"></h2><p data-i18n="casesLead"></p></div><div class="trust"><div class="card"><h3 data-i18n="case1Title"></h3><p data-i18n="case1Body"></p></div><div class="card"><h3 data-i18n="case2Title"></h3><p data-i18n="case2Body"></p></div></div></div></section>
-<section id="contact" class="cta"><div class="wrap"><div class="sectionhead"><div class="kicker" style="color:#bfdbfe">BUILD WITH RAGENTS</div><h2 data-i18n="ctaTitle"></h2><p data-i18n="ctaLead"></p></div><a class="btn outline" href="#contact" data-i18n="ctaButton"></a></div></section>
-</main><div class="modal" id="trialModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="closeTrial" aria-label="Close">×</button><iframe src="https://tally.so/r/eqAK0E?transparentBackground=1" title="Free Trial Form"></iframe></div></div><footer><div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap"><span>RAgents.net · <span data-i18n="footer"></span></span><span>© 2026 MOUQITECH</span></div></footer>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><i></i><span data-i18n="eyebrow"></span></div>
+        <h1><span data-i18n="heroTitle1"></span><br><span class="accent" data-i18n="heroTitle2"></span></h1>
+        <p class="lead" data-i18n="heroLead"></p>
+        <div class="actions">
+          <a class="btn primary" href="#contact" data-i18n="heroCta"></a>
+          <a class="btn outline" href="#capabilities" data-i18n="heroSecondary"></a>
+        </div>
+        <div class="hero-tags">
+          <span data-i18n="tag1"></span><span data-i18n="tag2"></span><span data-i18n="tag3"></span>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="panel-label">RAgents.net · <span data-i18n="panelLabel"></span></div>
+        <div class="panel-input" data-i18n="panelInput"></div>
+        <div class="panel-flow">
+          <strong data-i18n="panelFlowTitle"></strong>
+          <ol>
+            <li><b>01</b><span data-i18n="panelStep1"></span></li>
+            <li><b>02</b><span data-i18n="panelStep2"></span></li>
+            <li><b>03</b><span data-i18n="panelStep3"></span></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Pillars strip -->
+<section class="pillars" style="padding:0">
+  <div class="wrap">
+    <div class="pillar-grid">
+      <div class="pillar"><b data-i18n="pillar1Title"></b><span data-i18n="pillar1Body"></span></div>
+      <div class="pillar"><b data-i18n="pillar2Title"></b><span data-i18n="pillar2Body"></span></div>
+      <div class="pillar"><b data-i18n="pillar3Title"></b><span data-i18n="pillar3Body"></span></div>
+      <div class="pillar"><b data-i18n="pillar4Title"></b><span data-i18n="pillar4Body"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 · Platform -->
+<section id="platform">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec1Num"></div>
+      <h2 class="sec-title" data-i18n="sec1Title"></h2>
+      <p class="sec-lead" data-i18n="sec1Lead"></p>
+    </header>
+    <div class="platform-grid">
+      <article class="p-card">
+        <div class="num">01</div>
+        <h3 data-i18n="sec1Card1Title"></h3>
+        <p data-i18n="sec1Card1Body"></p>
+      </article>
+      <article class="p-card">
+        <div class="num">02</div>
+        <h3 data-i18n="sec1Card2Title"></h3>
+        <p data-i18n="sec1Card2Body"></p>
+      </article>
+      <article class="p-card">
+        <div class="num">03</div>
+        <h3 data-i18n="sec1Card3Title"></h3>
+        <p data-i18n="sec1Card3Body"></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · Capabilities -->
+<section id="capabilities" class="soft">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec2Num"></div>
+      <h2 class="sec-title" data-i18n="sec2Title"></h2>
+      <p class="sec-lead" data-i18n="sec2Lead"></p>
+    </header>
+    <div class="cap-grid">
+      <article class="cap">
+        <div class="cap-num">01 / KNOWLEDGE</div>
+        <h3 data-i18n="cap1Title"></h3>
+        <p data-i18n="cap1Body"></p>
+        <ul class="cap-tags"><li data-i18n="cap1Tag1"></li><li data-i18n="cap1Tag2"></li></ul>
+      </article>
+      <article class="cap">
+        <div class="cap-num">02 / MODELS</div>
+        <h3 data-i18n="cap2Title"></h3>
+        <p data-i18n="cap2Body"></p>
+        <ul class="cap-tags"><li>LLM</li><li>OCR</li><li>TTS</li></ul>
+      </article>
+      <article class="cap">
+        <div class="cap-num">03 / AGENTS</div>
+        <h3 data-i18n="cap3Title"></h3>
+        <p data-i18n="cap3Body"></p>
+        <ul class="cap-tags"><li data-i18n="cap3Tag1"></li><li data-i18n="cap3Tag2"></li></ul>
+      </article>
+      <article class="cap">
+        <div class="cap-num">04 / WORKFLOWS</div>
+        <h3 data-i18n="cap4Title"></h3>
+        <p data-i18n="cap4Body"></p>
+        <ul class="cap-tags"><li data-i18n="cap4Tag1"></li><li data-i18n="cap4Tag2"></li><li data-i18n="cap4Tag3"></li></ul>
+      </article>
+      <article class="cap">
+        <div class="cap-num">05 / TOOLS</div>
+        <h3 data-i18n="cap5Title"></h3>
+        <p data-i18n="cap5Body"></p>
+        <ul class="cap-tags"><li>Native</li><li>MCP</li><li>RPA+</li></ul>
+      </article>
+      <article class="cap">
+        <div class="cap-num">06 / OPERATIONS</div>
+        <h3 data-i18n="cap6Title"></h3>
+        <p data-i18n="cap6Body"></p>
+        <ul class="cap-tags"><li data-i18n="cap6Tag1"></li><li data-i18n="cap6Tag2"></li><li data-i18n="cap6Tag3"></li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · Workflow (dark) -->
+<section id="workflow" class="workflow">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec3Num"></div>
+      <h2 class="sec-title" data-i18n="sec3Title"></h2>
+      <p class="sec-lead" data-i18n="sec3Lead"></p>
+    </header>
+    <div class="wf-grid">
+      <div class="wf-col">
+        <div class="wf-col-title" data-i18n="sec3ColLeft"></div>
+        <ol>
+          <li><span class="wf-idx">01</span><div><strong data-i18n="sec3L1Title"></strong><span data-i18n="sec3L1Body"></span></div></li>
+          <li><span class="wf-idx">02</span><div><strong data-i18n="sec3L2Title"></strong><span data-i18n="sec3L2Body"></span></div></li>
+          <li><span class="wf-idx">03</span><div><strong data-i18n="sec3L3Title"></strong><span data-i18n="sec3L3Body"></span></div></li>
+          <li><span class="wf-idx">04</span><div><strong data-i18n="sec3L4Title"></strong><span data-i18n="sec3L4Body"></span></div></li>
+        </ol>
+      </div>
+      <div class="wf-col">
+        <div class="wf-col-title" data-i18n="sec3ColRight"></div>
+        <ol>
+          <li><span class="wf-idx">A</span><div><strong data-i18n="sec3R1Title"></strong><span data-i18n="sec3R1Body"></span></div></li>
+          <li><span class="wf-idx">B</span><div><strong data-i18n="sec3R2Title"></strong><span data-i18n="sec3R2Body"></span></div></li>
+          <li><span class="wf-idx">C</span><div><strong data-i18n="sec3R3Title"></strong><span data-i18n="sec3R3Body"></span></div></li>
+          <li><span class="wf-idx">D</span><div><strong data-i18n="sec3R4Title"></strong><span data-i18n="sec3R4Body"></span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · Delivery -->
+<section id="delivery">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec4Num"></div>
+      <h2 class="sec-title" data-i18n="sec4Title"></h2>
+      <p class="sec-lead" data-i18n="sec4Lead"></p>
+    </header>
+    <div class="delivery-steps">
+      <div class="d-step"><b data-i18n="sec4Step1Title"></b><span data-i18n="sec4Step1Body"></span></div>
+      <div class="d-step"><b data-i18n="sec4Step2Title"></b><span data-i18n="sec4Step2Body"></span></div>
+      <div class="d-step"><b data-i18n="sec4Step3Title"></b><span data-i18n="sec4Step3Body"></span></div>
+      <div class="d-step"><b data-i18n="sec4Step4Title"></b><span data-i18n="sec4Step4Body"></span></div>
+    </div>
+    <h3 class="pace-title" data-i18n="sec4PaceTitle"></h3>
+    <div class="pace-grid">
+      <article class="pace">
+        <div class="num" data-i18n="sec4Pace1Num"></div>
+        <h4 data-i18n="sec4Pace1Title"></h4>
+        <p data-i18n="sec4Pace1Body"></p>
+      </article>
+      <article class="pace">
+        <div class="num" data-i18n="sec4Pace2Num"></div>
+        <h4 data-i18n="sec4Pace2Title"></h4>
+        <p data-i18n="sec4Pace2Body"></p>
+      </article>
+      <article class="pace">
+        <div class="num" data-i18n="sec4Pace3Num"></div>
+        <h4 data-i18n="sec4Pace3Title"></h4>
+        <p data-i18n="sec4Pace3Body"></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · Governance -->
+<section id="governance" class="soft">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec5Num"></div>
+      <h2 class="sec-title" data-i18n="sec5Title"></h2>
+    </header>
+    <div class="gov-grid">
+      <div class="gov-col">
+        <h3 data-i18n="sec5LeftTitle"></h3>
+        <ul class="gov-list">
+          <li><b data-i18n="sec5L1Title"></b><span data-i18n="sec5L1Body"></span></li>
+          <li><b data-i18n="sec5L2Title"></b><span data-i18n="sec5L2Body"></span></li>
+          <li><b data-i18n="sec5L3Title"></b><span data-i18n="sec5L3Body"></span></li>
+        </ul>
+      </div>
+      <div class="gov-col">
+        <h3 data-i18n="sec5RightTitle"></h3>
+        <ul class="gov-list">
+          <li><b data-i18n="sec5R1Title"></b><span data-i18n="sec5R1Body"></span></li>
+          <li><b data-i18n="sec5R2Title"></b><span data-i18n="sec5R2Body"></span></li>
+          <li><b data-i18n="sec5R3Title"></b><span data-i18n="sec5R3Body"></span></li>
+          <li><b data-i18n="sec5R4Title"></b><span data-i18n="sec5R4Body"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · Cases -->
+<section id="cases">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="sec6Num"></div>
+      <h2 class="sec-title" data-i18n="sec6Title"></h2>
+      <p class="sec-lead" data-i18n="sec6Lead"></p>
+    </header>
+    <div class="case-grid">
+      <article class="case">
+        <div class="cat" data-i18n="case1Cat"></div>
+        <h3 data-i18n="case1Title"></h3>
+        <div class="sub" data-i18n="case1Sub"></div>
+        <p data-i18n="case1Body"></p>
+      </article>
+      <article class="case">
+        <div class="cat" data-i18n="case2Cat"></div>
+        <h3 data-i18n="case2Title"></h3>
+        <div class="sub" data-i18n="case2Sub"></div>
+        <p data-i18n="case2Body"></p>
+      </article>
+      <article class="case">
+        <div class="cat" data-i18n="case3Cat"></div>
+        <h3 data-i18n="case3Title"></h3>
+        <div class="sub" data-i18n="case3Sub"></div>
+        <p data-i18n="case3Body"></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Finale -->
+<section id="contact" class="finale">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-num" data-i18n="ctaKicker"></div>
+      <h2 class="sec-title" data-i18n="ctaTitle"></h2>
+      <p class="sec-lead" data-i18n="ctaLead"></p>
+    </header>
+    <div class="fin-cols">
+      <div class="fin-col"><b data-i18n="ctaCol1Title"></b><span data-i18n="ctaCol1Body"></span></div>
+      <div class="fin-col"><b data-i18n="ctaCol2Title"></b><span data-i18n="ctaCol2Body"></span></div>
+      <div class="fin-col"><b data-i18n="ctaCol3Title"></b><span data-i18n="ctaCol3Body"></span></div>
+    </div>
+    <div class="fin-actions">
+      <a class="btn primary" href="#contact" data-i18n="ctaButton"></a>
+      <span class="fin-site"><span data-i18n="ctaSitePrefix"></span> <a href="https://www.ragents.net" target="_blank" rel="noopener">www.ragents.net</a></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="modal" id="trialModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" id="closeTrial" aria-label="Close">×</button>
+    <iframe src="https://tally.so/r/eqAK0E?transparentBackground=1" title="Free Trial Form"></iframe>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footerBrand"></span>
+    <span>© 2026 MOUQITECH</span>
+  </div>
+</footer>
+
 <script>
-const copy={zh:{navWhy:'为什么选择',navCapabilities:'核心能力',navWorkflow:'工作方式',navCases:'应用场景',navCta:'免费体验',eyebrow:'企业级智能体平台',heroTitle:'轻松创建企业数字员工',heroLead:'连接企业知识、模型、工具与业务流程，把业务任务构建成可部署、可管理的智能体应用。',heroCta:'免费开启体验',heroSecondary:'探索核心能力',panelLabel:'企业级数字员工',panelInput:'把企业知识、流程和工具连接起来',panelFlowTitle:'知识 → 流程 → 工具',panelFlowBody:'一套平台，构建可部署、可管理的智能体应用',stat1Value:'50+',stat2Value:'100%',stat3Value:'3 min',stat4Value:'100+',stat1:'政企场景落地',stat2:'私有化部署支持',stat3:'智能体构建时间',stat4:'企业级方案交付',whyTitle:'从给人用的工具，转向 AI 智能体平台',whyLead:'一套平台，连接企业知识、模型与业务流程。',why1Title:'全方位本地部署',why1Body:'支持 Docker 一键启动，在企业选定的环境中运行，满足数据与合规要求。',why2Title:'可视化流程编排',why2Body:'基于图状态机，支持条件分支、循环与多智能体协作。',why3Title:'多租户组织管理',why3Body:'面向集团企业设计，支持多部门组织与分级资源共享。',capTitle:'企业智能体所需能力，一处完成',capLead:'覆盖从基础设施到应用层的完整智能体生命周期管理。',cap1:'知识库 RAG',cap1Body:'智能解析、向量化与检索增强',cap2:'模型调度',cap2Body:'LLM / OCR / TTS 统一管理切换',cap3:'流程引擎',cap3Body:'可视化工作流编排与执行追踪',cap4:'工具平台',cap4Body:'Native 工具与 MCP 标准协议',cap5:'RPA+ 自动化',cap5Body:'无侵入式端到端业务自动化',cap6:'知识图谱',cap6Body:'实体关系提取与深度推理辅助',cap7:'智能体构建',cap7Body:'对话式 Agent 快速配置中心',cap8:'监控与审计',cap8Body:'实时资源监控与运行日志审计',workflowTitle:'一个业务任务，串起整个平台',workflowLead:'从业务输入到可复核结果，知识、模型、流程与工具协同运行。',step1Title:'接入知识',step1Body:'整理业务资料与规则，为任务提供上下文。',step2Title:'配置智能体',step2Body:'关联角色、模型与工具，定义职责边界。',step3Title:'编排流程',step3Body:'配置步骤、条件分支与执行路径。',step4Title:'运行与优化',step4Body:'追踪日志与资源状态，持续完善效果。',casesTitle:'企业级治理，支撑长期运行',casesLead:'在实际部署中，按组织、权限和运行记录管理智能体应用。',case1Title:'私有化部署',case1Body:'支持企业自有环境部署，配合容器化交付与运行管理。',case2Title:'从场景开始扩展',case2Body:'从知识问答、供应链核对、设备运维等可验证任务切入，逐步扩展到团队。',ctaTitle:'让你的第一个数字员工，从这里开始',ctaLead:'带上一个业务问题，一起看清所需知识、流程和工具。',ctaButton:'预约平台演示 ↗',footer:'企业级智能体平台'},en:{navWhy:'Why RAgents',navCapabilities:'Capabilities',navWorkflow:'How it works',navCases:'Use cases',navCta:'Free trial',eyebrow:'ENTERPRISE AI AGENT PLATFORM',heroTitle:'Build Enterprise Digital Workers with Ease',heroLead:'Connect enterprise knowledge, models, tools and workflows to turn business tasks into deployable AI agents.',heroCta:'Start free trial',heroSecondary:'Explore capabilities',panelLabel:'enterprise digital worker',panelInput:'Connect knowledge, workflows and tools',panelFlowTitle:'Knowledge → Workflow → Tools',panelFlowBody:'One platform for deployable, manageable AI agents',stat1Value:'50+',stat2Value:'100%',stat3Value:'3 min',stat4Value:'100+',stat1:'enterprise deployments',stat2:'private deployment support',stat3:'agent build time',stat4:'enterprise solutions delivered',whyTitle:'From tools for people to an AI agent platform',whyLead:'One platform connecting enterprise knowledge, models and business workflows.',why1Title:'Full local deployment',why1Body:'Launch with Docker and run in your chosen environment to meet data and compliance needs.',why2Title:'Visual orchestration',why2Body:'Graph-based state machines support branches, loops and multi-agent collaboration.',why3Title:'Multi-tenant management',why3Body:'Built for group enterprises with department structures and tiered resource sharing.',capTitle:'Everything an enterprise agent needs',capLead:'Manage the full agent lifecycle from infrastructure to application layer.',cap1:'Knowledge RAG',cap1Body:'Parsing, vectorization and retrieval augmentation',cap2:'Model scheduling',cap2Body:'Unified LLM / OCR / TTS management',cap3:'Process engine',cap3Body:'Visual workflow orchestration and execution tracking',cap4:'Tool platform',cap4Body:'Native tools and MCP standard protocol',cap5:'RPA+ automation',cap5Body:'Non-invasive end-to-end business automation',cap6:'Knowledge graph',cap6Body:'Entity extraction and reasoning assistance',cap7:'Agent builder',cap7Body:'Conversational agent configuration center',cap8:'Monitor & audit',cap8Body:'Resource monitoring and runtime log audit',workflowTitle:'One business task, connected end to end',workflowLead:'Knowledge, models, workflows and tools work together from input to reviewable output.',step1Title:'Connect knowledge',step1Body:'Organize business documents and rules for task context.',step2Title:'Configure agents',step2Body:'Assign roles, models and tools with clear responsibilities.',step3Title:'Orchestrate workflows',step3Body:'Define steps, conditions and execution paths.',step4Title:'Run and improve',step4Body:'Track logs and resources, then iterate continuously.',casesTitle:'Enterprise governance for long-term operation',casesLead:'Manage agent applications through organization, permissions and runtime records.',case1Title:'Private deployment',case1Body:'Deploy in your own environment with containerized delivery and operations.',case2Title:'Start with a use case',case2Body:'Begin with verifiable tasks such as knowledge Q&A, supply chain review or equipment maintenance.',ctaTitle:'Start building your first digital worker',ctaLead:'Bring one business question. We will map the knowledge, workflow and tools it needs.',ctaButton:'Book a platform demo ↗',footer:'Enterprise AI agent platform'}};const browserLanguages=Array.from(navigator.languages||[]).concat(navigator.language||'');let lang=browserLanguages.some(l=>/^zh(?:-|$)/i.test(l))?'zh':'en';const apply=()=>{document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=copy[lang][e.dataset.i18n]);document.getElementById('language').textContent=lang==='zh'?'EN':'中';document.title=lang==='zh'?'RAgents.net · 企业级智能体平台':'RAgents.net · Enterprise AI Agent Platform'};document.getElementById('language').onclick=()=>{lang=lang==='zh'?'en':'zh';apply()};const modal=document.getElementById('trialModal');const openTrial=()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};const closeTrial=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''};document.getElementById('closeTrial').onclick=closeTrial;modal.onclick=e=>{if(e.target===modal)closeTrial()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeTrial()});document.querySelectorAll('[data-i18n="navCta"],[data-i18n="heroCta"],[data-i18n="ctaButton"]').forEach(e=>e.addEventListener('click',event=>{event.preventDefault();openTrial()}));apply();
+const copy = {
+  zh: {
+    // Nav
+    navPlatform:'平台介绍', navCapabilities:'核心能力', navCases:'应用场景', navGovernance:'企业治理', navCta:'预约平台演示 ↗',
+
+    // Hero
+    eyebrow:'企业级智能体平台',
+    heroTitle1:'轻松创建',
+    heroTitle2:'企业数字员工',
+    heroLead:'连接企业知识、模型与业务流程，把日常任务编排成可运行、可管理的智能体。',
+    heroCta:'预约平台演示 ↗',
+    heroSecondary:'探索核心能力 ↓',
+    tag1:'知识沉淀', tag2:'流程编排', tag3:'私有化部署',
+    panelLabel:'企业智能体工作台',
+    panelInput:'把企业知识，变成可执行的业务流程',
+    panelFlowTitle:'知识 → 推理 → 工具 → 结果',
+    panelStep1:'检索相关知识，补充任务上下文',
+    panelStep2:'编排模型与工具，执行业务步骤',
+    panelStep3:'查看运行记录，持续优化流程',
+
+    // Pillars
+    pillar1Title:'企业知识', pillar1Body:'沉淀业务经验',
+    pillar2Title:'流程编排', pillar2Body:'任务拆解 · 步骤推进',
+    pillar3Title:'工具连接', pillar3Body:'让 AI 对接业务系统',
+    pillar4Title:'企业治理', pillar4Body:'公私两可部署，可管理',
+
+    // 01 Platform
+    sec1Num:'01 / 平台介绍',
+    sec1Title:'把企业知识、模型和流程，连接在一起。',
+    sec1Lead:'RAgents 是面向企业的智能体平台，统一组织知识、模型、工具与流程，让业务员工用得起、管理得住。',
+    sec1Card1Title:'知识成为业务上下文',
+    sec1Card1Body:'通过检索增强利用企业文档，让智能体理解已有知识与处理规则。',
+    sec1Card2Title:'流程承载复杂任务',
+    sec1Card2Body:'将复杂型任务通过编排完成，让业务员工获得清晰的执行路径。',
+    sec1Card3Title:'治理支持规模化使用',
+    sec1Card3Body:'结合私有化部署、多租户组织与运行审计，管理企业内的 AI 应用。',
+
+    // 02 Capabilities
+    sec2Num:'02 / 核心能力',
+    sec2Title:'从知识问答，到业务自动化。',
+    sec2Lead:'围绕智能体的构建与运行，整合六组核心能力，减少模型、数据和工具之间的割裂。',
+    cap1Title:'企业知识与检索增强',
+    cap1Body:'解析文档、建立检索索引，为回答与任务补充完整的业务上下文。',
+    cap1Tag1:'知识库 RAG', cap1Tag2:'知识图谱',
+    cap2Title:'模型接入与调度',
+    cap2Body:'统一管理语言模型、文字识别与语音合成服务。',
+    cap3Title:'智能体配置与构建',
+    cap3Body:'围绕岗位化职责，配置智能体的职责、知识与工具。',
+    cap3Tag1:'角色配置', cap3Tag2:'知识与工具关联',
+    cap4Title:'可视化流程编排',
+    cap4Body:'将任务拆解为步骤，配置条件分支与循环。组织多智能体协作完成任务过程。',
+    cap4Tag1:'条件分支', cap4Tag2:'循环', cap4Tag3:'协作',
+    cap5Title:'工具与业务自动化',
+    cap5Body:'通过原生工具、MCP 与 RPA+ 连接业务操作，让智能体融入已有的工作流程。',
+    cap6Title:'运行监控与审计',
+    cap6Body:'查看运行日志与资源状态，了解优化如何执行，为问题定位和流程迭代提供依据。',
+    cap6Tag1:'执行追踪', cap6Tag2:'资源监控', cap6Tag3:'日志',
+
+    // 03 Workflow
+    sec3Num:'03 / 工作方式',
+    sec3Title:'一个业务任务，串起整个平台。',
+    sec3Lead:'以供应链单据核对为例，展示知识、模型、流程与工具如何配合。以下为应用设计示意。',
+    sec3ColLeft:'从业务问题出发',
+    sec3ColRight:'由平台能力支撑',
+    sec3L1Title:'收集任务材料', sec3L1Body:'输入待核对单据与业务要求，明确处理范围。',
+    sec3L2Title:'补充企业知识', sec3L2Body:'检索制度与规范，为核对提供业务依据。',
+    sec3L3Title:'执行核对步骤', sec3L3Body:'结合模型与工具，逐笔字段完成整理。',
+    sec3L4Title:'输出待复核结果', sec3L4Body:'形成差异清单，交给业务人员确认与处理。',
+    sec3R1Title:'知识匹配', sec3R1Body:'知识调度给出上下文，模型参与理解与信息提取。',
+    sec3R2Title:'流程协作', sec3R2Body:'编排步骤和条件分支，串接各环节输入输出。',
+    sec3R3Title:'工具与系统', sec3R3Body:'按需选择原生工具，直接接触业务操作。',
+    sec3R4Title:'记录与优化', sec3R4Body:'查看执行过程和运行日志，定位问题并迭代流程。',
+
+    // 04 Delivery
+    sec4Num:'04 / 构建与落地',
+    sec4Title:'从一个场景开始，逐步扩展到团队。',
+    sec4Lead:'围绕业务目标组织所需资源，再验证流程、部署环境与使用方式。',
+    sec4Step1Title:'接入知识', sec4Step1Body:'整理业务资料与知识范围',
+    sec4Step2Title:'配置智能体', sec4Step2Body:'关联角色、模型与工具',
+    sec4Step3Title:'编排流程', sec4Step3Body:'配置步骤与业务规则',
+    sec4Step4Title:'运行与优化', sec4Step4Body:'追踪执行，完善任务效果',
+    sec4PaceTitle:'按业务复杂度，安排落地节奏。',
+    sec4Pace1Num:'01 / 场景梳理', sec4Pace1Title:'确定要解决的问题',
+    sec4Pace1Body:'明确任务边界，输入输出与验收标准，选择一个可优先落地的场景。',
+    sec4Pace2Num:'02 / 原型验证', sec4Pace2Title:'用真实业务测效果',
+    sec4Pace2Body:'以业务样本验证检索、流程执行与工具支援，发现需要改进的环节。',
+    sec4Pace3Num:'03 / 部署推广', sec4Pace3Title:'在企业环境中运行',
+    sec4Pace3Body:'按组织结构配置使用权限，完成部署与培训，再逐步扩大使用范围。',
+
+    // 05 Governance
+    sec5Num:'05 / 企业治理',
+    sec5Title:'为企业环境设计，也为长期运行考虑。',
+    sec5LeftTitle:'私有化部署与运行管理',
+    sec5L1Title:'私有化部署', sec5L1Body:'支持本地环境，在企业选定的环境中运行。',
+    sec5L2Title:'容器化交付', sec5L2Body:'通过 Docker 部署，结合实际环境配置服务。',
+    sec5L3Title:'监控与审计', sec5L3Body:'查看资源状态及运行日志，支持追踪与变更同步。',
+    sec5RightTitle:'从组织结构，到资源使用边界',
+    sec5R1Title:'多用户', sec5R1Body:'按账户组织分类与资源',
+    sec5R2Title:'多部门', sec5R2Body:'以架构规划的企业组织',
+    sec5R3Title:'分级共享', sec5R3Body:'按权限配置资源使用范围',
+    sec5R4Title:'运行记录', sec5R4Body:'追踪任务与工具执行过程',
+
+    // 06 Cases
+    sec6Num:'06 / 应用场景',
+    sec6Title:'同一套平台，服务不同业务任务。',
+    sec6Lead:'从可验证的任务切入，覆盖知识、流程和工具。以下为应用方向示例。',
+    case1Cat:'制造与运维', case1Title:'设备知识', case1Sub:'把维修经验用起来',
+    case1Body:'把设备维修手册与维修记录整理成排查参考，辅助现场人员处理问题。',
+    case2Cat:'零售与供应链', case2Title:'单据核对', case2Sub:'把重复核对做成流程',
+    case2Body:'提取单据信息，对照业务规则形成差异清单，辅助业务人员复核。',
+    case3Cat:'企业内部服务', case3Title:'知识助手', case3Sub:'让业务知识更易获取',
+    case3Body:'汇集制度、产品与服务资料，为员工问询和日常工作提供参考。',
+
+    // Finale
+    ctaKicker:'开始构建 / BUILD WITH RAGENTS',
+    ctaTitle:'让你的第一个数字员工，从这里开始。',
+    ctaLead:'带上一个业务问题，一起看清所需知识、流程和工具的落地方式。',
+    ctaCol1Title:'了解平台', ctaCol1Body:'查看能力，交流应用方向',
+    ctaCol2Title:'预约演示', ctaCol2Body:'结合业务，展示任务流程',
+    ctaCol3Title:'讨论部署', ctaCol3Body:'评估环境，明确集成范围',
+    ctaButton:'预约平台演示 ↗',
+    ctaSitePrefix:'访问官网',
+
+    // Footer
+    footerBrand:'RAgents.net · 企业智能体平台',
+  },
+  en: {
+    // Nav
+    navPlatform:'Platform', navCapabilities:'Capabilities', navCases:'Use cases', navGovernance:'Governance', navCta:'Book demo ↗',
+
+    // Hero
+    eyebrow:'ENTERPRISE AI AGENT PLATFORM',
+    heroTitle1:'Build enterprise',
+    heroTitle2:'digital workers with ease',
+    heroLead:'Connect enterprise knowledge, models and business workflows — turn everyday work into runnable, manageable AI agents.',
+    heroCta:'Book platform demo ↗',
+    heroSecondary:'Explore capabilities ↓',
+    tag1:'Knowledge capture', tag2:'Workflow orchestration', tag3:'Private deployment',
+    panelLabel:'enterprise agent console',
+    panelInput:'Turn enterprise knowledge into executable workflows',
+    panelFlowTitle:'Knowledge → Reasoning → Tools → Result',
+    panelStep1:'Retrieve relevant knowledge for task context',
+    panelStep2:'Orchestrate models and tools through business steps',
+    panelStep3:'Review runtime records and iterate on the flow',
+
+    // Pillars
+    pillar1Title:'Enterprise knowledge', pillar1Body:'Capture business experience',
+    pillar2Title:'Workflow orchestration', pillar2Body:'Break down tasks · advance steps',
+    pillar3Title:'Tool connection', pillar3Body:'Let AI reach business systems',
+    pillar4Title:'Enterprise governance', pillar4Body:'Public or private, always manageable',
+
+    // 01 Platform
+    sec1Num:'01 / PLATFORM',
+    sec1Title:'Connecting enterprise knowledge, models and workflows.',
+    sec1Lead:'RAgents is an enterprise agent platform that unifies knowledge, models, tools and workflows — so business teams can adopt and manage AI reliably.',
+    sec1Card1Title:'Knowledge becomes business context',
+    sec1Card1Body:'Retrieval augmentation lets agents work from your existing documents and processing rules.',
+    sec1Card2Title:'Workflows carry complex work',
+    sec1Card2Body:'Break complex tasks into orchestrated steps so operators follow a clear execution path.',
+    sec1Card3Title:'Governance scales adoption',
+    sec1Card3Body:'Private deployment, multi-tenant organizations and audit logs keep enterprise AI managed.',
+
+    // 02 Capabilities
+    sec2Num:'02 / CAPABILITIES',
+    sec2Title:'From knowledge Q&A to business automation.',
+    sec2Lead:'Six coordinated capabilities across the agent lifecycle, reducing gaps between models, data and tools.',
+    cap1Title:'Knowledge & retrieval augmentation',
+    cap1Body:'Parse documents and build retrieval indexes so answers and tasks have full business context.',
+    cap1Tag1:'RAG', cap1Tag2:'Knowledge graph',
+    cap2Title:'Model access & scheduling',
+    cap2Body:'Unified management of language models, OCR and speech synthesis services.',
+    cap3Title:'Agent configuration & building',
+    cap3Body:'Configure agents around role responsibilities — with clear knowledge and tool bindings.',
+    cap3Tag1:'Role configuration', cap3Tag2:'Knowledge & tool binding',
+    cap4Title:'Visual workflow orchestration',
+    cap4Body:'Break tasks into steps, configure conditions and loops, coordinate multi-agent collaboration.',
+    cap4Tag1:'Conditions', cap4Tag2:'Loops', cap4Tag3:'Collaboration',
+    cap5Title:'Tools & business automation',
+    cap5Body:'Native tools, MCP and RPA+ connect operations so agents fit into existing workflows.',
+    cap6Title:'Run monitoring & audit',
+    cap6Body:'Runtime logs and resource state help you diagnose issues and iterate on workflows.',
+    cap6Tag1:'Execution trace', cap6Tag2:'Resource monitor', cap6Tag3:'Logs',
+
+    // 03 Workflow
+    sec3Num:'03 / HOW IT WORKS',
+    sec3Title:'One business task, connecting the whole platform.',
+    sec3Lead:'A supply-chain document review illustrates how knowledge, models, workflows and tools work together. Reference design shown.',
+    sec3ColLeft:'From the business problem',
+    sec3ColRight:'Supported by the platform',
+    sec3L1Title:'Collect task materials', sec3L1Body:'Supply documents and requirements to define processing scope.',
+    sec3L2Title:'Augment with knowledge', sec3L2Body:'Retrieve policies and rules to back the review.',
+    sec3L3Title:'Execute review steps', sec3L3Body:'Combine models and tools to check each field.',
+    sec3L4Title:'Output a review draft', sec3L4Body:'Produce a discrepancy list for a human to confirm.',
+    sec3R1Title:'Knowledge matching', sec3R1Body:'Retrieval supplies context; models parse and extract information.',
+    sec3R2Title:'Workflow coordination', sec3R2Body:'Orchestrated steps and branches link inputs to outputs.',
+    sec3R3Title:'Tools & systems', sec3R3Body:'Chosen native tools reach the actual business operations.',
+    sec3R4Title:'Records & iteration', sec3R4Body:'Execution traces and runtime logs surface issues to iterate on.',
+
+    // 04 Delivery
+    sec4Num:'04 / DELIVERY',
+    sec4Title:'Start with one scenario, expand to the team.',
+    sec4Lead:'Organize the resources a business goal needs, then validate workflow, environment and adoption.',
+    sec4Step1Title:'Connect knowledge', sec4Step1Body:'Assemble the documents and knowledge scope',
+    sec4Step2Title:'Configure agents', sec4Step2Body:'Bind roles, models and tools',
+    sec4Step3Title:'Orchestrate workflows', sec4Step3Body:'Define steps and business rules',
+    sec4Step4Title:'Run and iterate', sec4Step4Body:'Trace execution, refine outcomes',
+    sec4PaceTitle:'Pace the rollout by business complexity.',
+    sec4Pace1Num:'01 / SCOPING', sec4Pace1Title:'Identify the problem',
+    sec4Pace1Body:'Clarify task boundaries, inputs, outputs and acceptance criteria; pick a first scenario worth prioritizing.',
+    sec4Pace2Num:'02 / PROTOTYPE', sec4Pace2Title:'Validate with real business',
+    sec4Pace2Body:'Test retrieval, workflow execution and tool support against real samples; find what to improve.',
+    sec4Pace3Num:'03 / ROLLOUT', sec4Pace3Title:'Run in the enterprise',
+    sec4Pace3Body:'Configure permissions by org structure, complete deployment and training, then expand adoption.',
+
+    // 05 Governance
+    sec5Num:'05 / GOVERNANCE',
+    sec5Title:'Designed for enterprise environments and long-term operation.',
+    sec5LeftTitle:'Private deployment & operations',
+    sec5L1Title:'Private deployment', sec5L1Body:'Runs inside the environment your enterprise chooses.',
+    sec5L2Title:'Container delivery', sec5L2Body:'Ships with Docker and adapts to the target environment.',
+    sec5L3Title:'Monitor & audit', sec5L3Body:'Resource state and runtime logs for traceability and change sync.',
+    sec5RightTitle:'From org structure to resource boundaries',
+    sec5R1Title:'Multi-user', sec5R1Body:'Organize accounts and their resources',
+    sec5R2Title:'Multi-department', sec5R2Body:'Model your enterprise structure',
+    sec5R3Title:'Tiered sharing', sec5R3Body:'Configure resource scope by permission',
+    sec5R4Title:'Runtime records', sec5R4Body:'Trace task and tool execution',
+
+    // 06 Cases
+    sec6Num:'06 / USE CASES',
+    sec6Title:'One platform, serving different business tasks.',
+    sec6Lead:'Start with verifiable tasks covering knowledge, workflow and tools. Reference directions shown.',
+    case1Cat:'MANUFACTURING & OPERATIONS', case1Title:'Equipment knowledge', case1Sub:'Put repair experience to work',
+    case1Body:'Turn equipment manuals and repair logs into a searchable reference for on-site engineers.',
+    case2Cat:'RETAIL & SUPPLY CHAIN', case2Title:'Document review', case2Sub:'Turn repetitive checks into a workflow',
+    case2Body:'Extract document fields, compare against business rules and produce a review draft for operators.',
+    case3Cat:'INTERNAL SERVICES', case3Title:'Knowledge assistant', case3Sub:'Make business knowledge easier to reach',
+    case3Body:'Aggregate policies, product and service materials to support daily inquiries across teams.',
+
+    // Finale
+    ctaKicker:'BUILD WITH RAGENTS',
+    ctaTitle:'Start building your first digital worker — here.',
+    ctaLead:'Bring one business question — we\u2019ll map the knowledge, workflow and tools it needs.',
+    ctaCol1Title:'Learn the platform', ctaCol1Body:'Explore capabilities and discuss directions',
+    ctaCol2Title:'Book a demo', ctaCol2Body:'See the workflow with your use case',
+    ctaCol3Title:'Discuss deployment', ctaCol3Body:'Assess environment and integration scope',
+    ctaButton:'Book platform demo ↗',
+    ctaSitePrefix:'Visit',
+
+    // Footer
+    footerBrand:'RAgents.net · Enterprise AI agent platform',
+  }
+};
+
+const browserLanguages = Array.from(navigator.languages || []).concat(navigator.language || '');
+let lang = browserLanguages.some(l => /^zh(?:-|$)/i.test(l)) ? 'zh' : 'en';
+
+const meta = {
+  zh: {
+    title: 'RAgents.net · 企业级智能体中台 · Enterprise AI Agent Platform',
+    desc: 'RAgents.net 企业级智能体中台（AI Agent Hub）—— 连接企业知识、模型与业务流程，一站式完成 RAG 知识库、流程编排、多智能体协作、工具（MCP / RPA+）接入与私有化部署，助力企业级 AI 快速落地。'
+  },
+  en: {
+    title: 'RAgents.net · Enterprise AI Agent Platform · 企业级智能体中台',
+    desc: 'RAgents.net — enterprise AI agent hub. RAG knowledge base, workflow orchestration, multi-agent collaboration, MCP / RPA+ tool integration and private deployment to accelerate enterprise AI adoption.'
+  }
+};
+
+const setMeta = (name, value, attr = 'name') => {
+  const el = document.querySelector(`meta[${attr}="${name}"]`);
+  if (el) el.setAttribute('content', value);
+};
+
+const apply = () => {
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = copy[lang][el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+  document.getElementById('language').textContent = lang === 'zh' ? 'EN' : '中';
+  document.title = meta[lang].title;
+  setMeta('description', meta[lang].desc);
+  setMeta('og:description', meta[lang].desc, 'property');
+  setMeta('og:title', meta[lang].title, 'property');
+  setMeta('og:locale', lang === 'zh' ? 'zh_CN' : 'en_US', 'property');
+};
+
+document.getElementById('language').onclick = () => { lang = lang === 'zh' ? 'en' : 'zh'; apply(); };
+
+const modal = document.getElementById('trialModal');
+const openTrial = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
+const closeTrial = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
+document.getElementById('closeTrial').onclick = closeTrial;
+modal.onclick = e => { if (e.target === modal) closeTrial(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTrial(); });
+document.querySelectorAll('[data-i18n="navCta"],[data-i18n="heroCta"],[data-i18n="ctaButton"]').forEach(el =>
+  el.addEventListener('click', ev => { ev.preventDefault(); openTrial(); })
+);
+
+apply();
 </script>
-</body></html>
+
+</body>
+</html>
