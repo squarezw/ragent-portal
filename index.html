@@ -31,10 +31,6 @@
   <meta name="twitter:title" content="RAgents.net · Enterprise AI Agent Platform" />
   <meta name="twitter:description" content="Enterprise AI agent hub — RAG, workflow orchestration, multi-agent, MCP / RPA+, private deployment." />
 
-  <!-- Perf hints -->
-  <link rel="preconnect" href="https://tally.so" crossorigin />
-  <link rel="dns-prefetch" href="https://tally.so" />
-
   <!-- Structured data -->
   <script type="application/ld+json">
   {
@@ -236,13 +232,6 @@
     footer{padding:26px 0;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line-2)}
     footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-    /* Modal (Tally) */
-    .modal{position:fixed;inset:0;z-index:40;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:24px}
-    .modal.open{display:flex}
-    .modal-card{width:min(900px,100%);height:min(760px,90vh);background:#fff;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 24px 90px #02061766}
-    .modal-card iframe{width:100%;height:100%;border:0}
-    .modal-close{position:absolute;right:14px;top:14px;z-index:2;width:38px;height:38px;padding:0;background:#ffffffdd;color:#334155;font-size:24px;line-height:1;border-radius:999px}
-
     /* Responsive */
     @media(max-width:960px){
       .hero-grid,.build-grid{grid-template-columns:1fr;gap:44px}
@@ -270,7 +259,7 @@
       <a href="#cases" data-i18n="navCases"></a>
       <a href="#governance" data-i18n="navGovernance"></a>
       <button class="lang" id="language">EN</button>
-      <a class="btn primary" href="#contact" data-i18n="navCta"></a>
+      <a class="btn primary" href="https://ragents.net/" data-i18n="navCta"></a>
     </div>
   </div></div>
 </nav>
@@ -286,7 +275,7 @@
         <h1><span data-i18n="heroTitle1"></span><br><span class="accent" data-i18n="heroTitle2"></span></h1>
         <p class="lead" data-i18n="heroLead"></p>
         <div class="actions">
-          <a class="btn primary" href="#contact" data-i18n="heroCta"></a>
+          <a class="btn primary" href="https://ragents.net/" data-i18n="heroCta"></a>
           <a class="btn outline" href="#capabilities" data-i18n="heroSecondary"></a>
         </div>
         <div class="hero-tags">
@@ -612,20 +601,13 @@
       <div class="fin-col"><b data-i18n="ctaCol3Title"></b><span data-i18n="ctaCol3Body"></span></div>
     </div>
     <div class="fin-actions">
-      <a class="btn primary" href="#contact" data-i18n="ctaButton"></a>
+      <a class="btn primary" href="https://ragents.net/" data-i18n="ctaButton"></a>
       <span class="fin-site"><span data-i18n="ctaSitePrefix"></span> <a href="https://www.ragents.net" target="_blank" rel="noopener">www.ragents.net</a></span>
     </div>
   </div>
 </section>
 
 </main>
-
-<div class="modal" id="trialModal" aria-hidden="true">
-  <div class="modal-card">
-    <button class="modal-close" id="closeTrial" aria-label="Close">×</button>
-    <iframe src="https://tally.so/r/eqAK0E?transparentBackground=1" title="Free Trial Form"></iframe>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
@@ -638,14 +620,14 @@
 const copy = {
   zh: {
     // Nav
-    navPlatform:'平台介绍', navCapabilities:'核心能力', navCases:'应用场景', navGovernance:'企业治理', navCta:'预约平台演示 ↗',
+    navPlatform:'平台介绍', navCapabilities:'核心能力', navCases:'应用场景', navGovernance:'企业治理', navCta:'立即试用',
 
     // Hero
     eyebrow:'企业级智能体平台',
     heroTitle1:'轻松创建',
     heroTitle2:'企业数字员工',
     heroLead:'连接企业知识、模型与业务流程，把日常任务编排成可运行、可管理的智能体。',
-    heroCta:'预约平台演示 ↗',
+    heroCta:'立即试用',
     heroSecondary:'探索核心能力 ↓',
     tag1:'知识沉淀', tag2:'流程编排', tag3:'私有化部署',
     panelLabel:'企业智能体工作台',
@@ -783,9 +765,9 @@ const copy = {
     ctaTitle:'让你的第一个数字员工，从这里开始。',
     ctaLead:'带上一个业务问题，一起看清所需知识、流程和工具的落地方式。',
     ctaCol1Title:'了解平台', ctaCol1Body:'查看能力，交流应用方向',
-    ctaCol2Title:'预约演示', ctaCol2Body:'结合业务，展示任务流程',
+    ctaCol2Title:'立即试用', ctaCol2Body:'进入平台，动手跑通流程',
     ctaCol3Title:'讨论部署', ctaCol3Body:'评估环境，明确集成范围',
-    ctaButton:'预约平台演示 ↗',
+    ctaButton:'立即试用',
     ctaSitePrefix:'访问官网',
 
     // Footer
@@ -793,14 +775,14 @@ const copy = {
   },
   en: {
     // Nav
-    navPlatform:'Platform', navCapabilities:'Capabilities', navCases:'Use cases', navGovernance:'Governance', navCta:'Book demo ↗',
+    navPlatform:'Platform', navCapabilities:'Capabilities', navCases:'Use cases', navGovernance:'Governance', navCta:'Try now',
 
     // Hero
     eyebrow:'ENTERPRISE AI AGENT PLATFORM',
     heroTitle1:'Build enterprise',
     heroTitle2:'digital workers with ease',
     heroLead:'Connect enterprise knowledge, models and business workflows — turn everyday work into runnable, manageable AI agents.',
-    heroCta:'Book platform demo ↗',
+    heroCta:'Try now',
     heroSecondary:'Explore capabilities ↓',
     tag1:'Knowledge capture', tag2:'Workflow orchestration', tag3:'Private deployment',
     panelLabel:'enterprise agent console',
@@ -938,9 +920,9 @@ const copy = {
     ctaTitle:'Start building your first digital worker — here.',
     ctaLead:'Bring one business question — we\u2019ll map the knowledge, workflow and tools it needs.',
     ctaCol1Title:'Learn the platform', ctaCol1Body:'Explore capabilities and discuss directions',
-    ctaCol2Title:'Book a demo', ctaCol2Body:'See the workflow with your use case',
+    ctaCol2Title:'Try now', ctaCol2Body:'Jump into the platform and run a workflow',
     ctaCol3Title:'Discuss deployment', ctaCol3Body:'Assess environment and integration scope',
-    ctaButton:'Book platform demo ↗',
+    ctaButton:'Try now',
     ctaSitePrefix:'Visit',
 
     // Footer
@@ -982,16 +964,6 @@ const apply = () => {
 };
 
 document.getElementById('language').onclick = () => { lang = lang === 'zh' ? 'en' : 'zh'; apply(); };
-
-const modal = document.getElementById('trialModal');
-const openTrial = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
-const closeTrial = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
-document.getElementById('closeTrial').onclick = closeTrial;
-modal.onclick = e => { if (e.target === modal) closeTrial(); };
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTrial(); });
-document.querySelectorAll('[data-i18n="navCta"],[data-i18n="heroCta"],[data-i18n="ctaButton"]').forEach(el =>
-  el.addEventListener('click', ev => { ev.preventDefault(); openTrial(); })
-);
 
 apply();
 </script>
